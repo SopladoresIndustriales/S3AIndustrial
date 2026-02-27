@@ -1,17 +1,37 @@
 ---
-
+// Página Principal - S3A Industrial
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Industries from '../components/IndustriesNew.astro';
+import Process from '../components/ProcessNew.astro';
+import CTAFinal from '../components/CTAFinalNew.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout
+  title="S3A Industrial | Reparación y Mantenimiento de Sopladores Industriales en Argentina"
+  description="S3A Industrial — especialistas en reparación y mantenimiento de sopladores industriales. Servicio técnico en planta, mantenimiento preventivo y correctivo. Respuesta rápida y diagnóstico eficiente. ¡Solicitá tu cotización!"
+  canonicalURL="https://s3aindustrial.com/"
+>
+  <!-- Header fijo -->
+  <Header />
+  
+  <!-- Main content -->
+  <main>
+    <!-- Hero Section -->
+    <Hero />
+    
+    <!-- Industries Section -->
+    <Industries />
+    
+    <!-- Process Section -->
+    <Process />
+    
+    <!-- Final CTA Section -->
+    <CTAFinal />
+    
+    <!-- Footer -->
+    <Footer />
+  </main>
+</Layout>

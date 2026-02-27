@@ -1,0 +1,592 @@
+---
+// Hero Section - Layout: texto izquierda / formulario WhatsApp derecha
+// ⚠️ Cambiá WHATSAPP_NUMBER por el número real de la empresa (con código de país, sin + ni espacios)
+const WHATSAPP_NUMBER = "5491124599330";
+---
+
+<section id="inicio" class="hero-section">
+  <!-- Background -->
+  <div class="hero-background">
+    <img src="/imagenes/S3AImagnes/repickydesktop2.png" alt="" class="hero-image hero-image--desktop" />
+    <img src="/imagenes/S3AImagnes/repicky25.png" alt="" class="hero-image hero-image--mobile" />
+    <div class="hero-overlay"></div>
+  </div>
+
+  <!-- Accent bar top -->
+  <div class="hero-top-bar"></div>
+
+  <!-- Content -->
+  <div class="hero-content">
+    <div class="container">
+      <div class="content-grid">
+
+        <!-- ── COLUMNA IZQUIERDA: Texto ── -->
+        <div class="text-content">
+
+          <!-- Eyebrow badge -->
+          <div class="hero-eyebrow">
+            <span class="hero-eyebrow-dot"></span>
+            <span class="hero-eyebrow-text">Servicio Industrial Especializado</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="title-line">Expertos en</span>
+            <span class="title-main">Sopladores Industriales</span>
+            <span class="title-brand">S3A Industrial</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Servicio técnico especializado en <strong>reparación y mantenimiento</strong> de equipos industriales.
+            <strong>Garantizamos la continuidad operativa</strong> de su negocio.
+          </p>
+
+          <!-- Features -->
+          <ul class="features-list">
+            <li class="feature">
+              <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <span>Atención inmediata y servicio en sitio</span>
+            </li>
+            <li class="feature">
+              <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <span>Técnicos especializados</span>
+            </li>
+            <li class="feature">
+              <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <span>Presupuesto detallado y transparente</span>
+            </li>
+          </ul>
+
+          <!-- CTA Buttons -->
+          <div class="cta-buttons">
+            <a href="/contacto" class="btn-primary">
+              Solicitar Servicio
+              <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
+            </a>
+            <a href="/servicios" class="btn-secondary">
+              Nuestros Servicios
+            </a>
+          </div>
+
+        </div>
+
+        <!-- ── COLUMNA DERECHA: Formulario WhatsApp ── -->
+        <div class="form-card">
+          <!-- Header -->
+          <div class="form-card-header">
+            <div class="form-header-text">
+              <div class="form-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.525 5.845L.057 23.986l6.306-1.452A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.013-1.374l-.36-.213-3.737.859.882-3.626-.234-.372A9.818 9.818 0 1112 21.818z"/>
+              </svg>
+              Respuesta inmediata por WhatsApp
+            </div>
+            <h2 class="form-title">Solicitar Presupuesto</h2>
+            <p class="form-subtitle">Completá los datos y te contactamos al instante</p>
+            </div><!-- /form-header-text -->
+            <img src="/logo/logo2.svg" alt="S3A Industrial" class="form-logo" />
+          </div>
+
+          <!-- Form -->
+          <form id="heroWAForm" class="hero-form" data-wa={WHATSAPP_NUMBER}>
+
+            <!-- Toggle bar — solo mobile -->
+            <button type="button" class="form-toggle-btn" id="formToggleBtn" aria-expanded="false">
+              <span class="form-toggle-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="opacity:.85">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                Completar solicitud
+              </span>
+              <svg class="form-toggle-chevron" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+
+            <!-- Campos plegables en mobile -->
+            <div class="form-body" id="formBody">
+
+            <div class="frow">
+              <input type="text" name="nombre" placeholder="Nombre y Apellido *" required autocomplete="name" />
+            </div>
+
+            <div class="frow two">
+              <input type="text" name="empresa" placeholder="Empresa *" required />
+              <input type="text" name="sector" placeholder="Sector / Rubro" />
+            </div>
+
+            <div class="frow two">
+              <input type="email" name="email" placeholder="Email *" required autocomplete="email" />
+              <input type="tel" name="cel" placeholder="Celular *" required autocomplete="tel" />
+            </div>
+
+            <div class="frow two">
+              <input type="text" name="localidad" placeholder="Localidad" />
+              <input type="text" name="provincia" placeholder="Provincia" />
+            </div>
+
+            <div class="frow">
+              <select name="equipo" required>
+                <option value="" disabled selected>Tipo de equipo *</option>
+                <option value="Soplador de Lóbulos (Roots Blower)">Soplador de Lóbulos (Roots Blower)</option>
+                <option value="Soplador de Canal Lateral / Regenerativo">Soplador de Canal Lateral / Regenerativo</option>
+                <option value="Soplador Centrífugo">Soplador Centrífugo</option>
+                <option value="Compresor de Tornillo">Compresor de Tornillo</option>
+                <option value="Compresor de Pistón / Alternativo">Compresor de Pistón / Alternativo</option>
+                <option value="Bomba de Vacío Industrial">Bomba de Vacío Industrial</option>
+                <option value="Otro equipo">Otro equipo</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn-wa">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.525 5.845L.057 23.986l6.306-1.452A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.013-1.374l-.36-.213-3.737.859.882-3.626-.234-.372A9.818 9.818 0 1112 21.818z"/>
+              </svg>
+              Enviar por WhatsApp
+            </button>
+
+            </div><!-- /form-body -->
+
+          </form>
+
+          <!-- Privacy note -->
+          <p class="form-privacy">
+            🔒 Tus datos son confidenciales. Solo se usan para contactarte.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<script>
+  // ── Formulario plegable mobile ──
+  const toggleBtn = document.getElementById('formToggleBtn');
+  const formBody  = document.getElementById('formBody');
+  if (toggleBtn && formBody) {
+    toggleBtn.addEventListener('click', () => {
+      const isOpen = formBody.classList.toggle('is-open');
+      toggleBtn.setAttribute('aria-expanded', String(isOpen));
+    });
+  }
+
+  // ── WhatsApp form submit ──
+  const form = document.getElementById('heroWAForm') as HTMLFormElement | null;
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const d = new FormData(form);
+      const get = (k: string) => (d.get(k) as string || '').trim();
+
+      const nombre   = get('nombre');
+      const empresa  = get('empresa');
+      const sector   = get('sector');
+      const email    = get('email');
+      const cel      = get('cel');
+      const localidad = get('localidad');
+      const provincia = get('provincia');
+      const equipo   = get('equipo');
+
+      const msg =
+`🔧 *SOLICITUD DE PRESUPUESTO - S3A Industrial*
+
+👤 *Nombre:* ${nombre}
+🏭 *Empresa:* ${empresa}${sector ? `\n📂 *Sector:* ${sector}` : ''}
+📧 *Email:* ${email}
+📱 *Celular:* ${cel}${localidad ? `\n📍 *Localidad:* ${localidad}` : ''}${provincia ? ` - ${provincia}` : ''}
+⚙️ *Equipo:* ${equipo}
+
+Hola, me comunico desde el sitio web para solicitar un presupuesto. Quedo a disposición para coordinar. ¡Gracias!`;
+
+      const waNumber = (form.dataset.wa || '').replace(/\D/g, '');
+      const url = `https://wa.me/${waNumber}?text=${encodeURIComponent(msg)}`;
+      window.open(url, '_blank');
+    });
+  }
+</script>
+
+<style>
+  /* ─────────────────────────────────────────
+     HERO SECTION
+  ───────────────────────────────────────── */
+  .hero-section {
+    position: relative;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0d1821 0%, #1e313f 100%);
+    padding-top: 140px;
+    padding-bottom: 80px;
+  }
+  @media (min-width: 1024px) {
+    .hero-section { min-height: 100vh; padding-top: 160px; padding-bottom: 60px; }
+  }
+
+  /* ── BACKGROUND ── */
+  .hero-background { position: absolute; inset: 0; z-index: 0; }
+  .hero-image { width: 100%; height: 100%; object-fit: cover; opacity: 1; }
+
+  /* Mobile: show repicky25, hide desktop */
+  .hero-image--desktop { display: none; }
+  .hero-image--mobile  { display: block; object-fit: cover; object-position: center center; width: 100%; height: 100%; opacity: 0.6; }
+
+  /* Desktop: show repicky9, hide repicky10 */
+  @media (min-width: 1024px) {
+    .hero-image--desktop { display: block; }
+    .hero-image--mobile  { display: none; }
+  }
+  .hero-overlay {
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(to right, rgba(13,24,33,.72) 0%, rgba(13,24,33,.38) 45%, rgba(13,24,33,.08) 100%),
+      linear-gradient(to bottom, rgba(0,0,0,.08) 0%, transparent 30%, rgba(0,0,0,.12) 100%);
+  }
+  /* Mobile overlay: igual que HeroNosotros — oscuro arriba y abajo */
+  @media (max-width: 1023px) {
+    .hero-overlay {
+      background: linear-gradient(to bottom, rgba(0,0,0,.70) 0%, rgba(0,0,0,.50) 50%, rgba(0,0,0,.70) 100%);
+    }
+  }
+
+  /* ── TOP BAR ── */
+  .hero-top-bar {
+    position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, transparent 0%, rgba(170,126,86,.6) 25%, #cca373 50%, rgba(170,126,86,.6) 75%, transparent 100%);
+    z-index: 5; pointer-events: none;
+  }
+
+  /* ── CONTENT WRAPPER ── */
+  .hero-content { position: relative; z-index: 10; width: 100%; }
+
+  .container {
+    max-width: 1280px; margin: 0 auto; padding: 0 1.5rem;
+  }
+  @media (min-width: 640px)  { .container { padding: 0 2rem; } }
+  @media (min-width: 1024px) { .container { padding: 0 2.5rem; } }
+
+  /* ── GRID: 1 col mobile → 2 col desktop ── */
+  .content-grid {
+    display: grid;
+    gap: 2.5rem;
+    align-items: start;
+  }
+  @media (min-width: 1024px) {
+    .content-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+  }
+
+  /* ─────────────────────────────────────────
+     COLUMNA IZQUIERDA: TEXTO
+  ───────────────────────────────────────── */
+  .text-content {
+    display: flex; flex-direction: column; gap: 1.5rem;
+  }
+  @media (min-width: 1024px) { .text-content { gap: 1.75rem; } }
+
+  /* Eyebrow */
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 8px 18px;
+    background: rgba(170,126,86,.12);
+    border: 1px solid rgba(170,126,86,.3);
+    border-radius: 100px;
+    width: fit-content;
+  }
+  .hero-eyebrow-dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: #cca373;
+    animation: pulse-dot 2.5s ease-in-out infinite; flex-shrink: 0;
+  }
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%       { opacity: .5; transform: scale(.7); }
+  }
+  .hero-eyebrow-text {
+    font-family: var(--font-heading); font-size: .72rem;
+    font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: #cca373;
+  }
+
+  /* Title */
+  .hero-title { display: flex; flex-direction: column; gap: 0.4rem; }
+  .title-line {
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 700; color: rgba(255,255,255,.9);
+    letter-spacing: .05em; text-transform: uppercase;
+  }
+  .title-main {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 6vw, 4.2rem);
+    font-weight: 400; color: #fff;
+    letter-spacing: .02em; text-transform: uppercase;
+    line-height: 1; text-shadow: 0 4px 20px rgba(0,0,0,.5);
+  }
+  .title-brand {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 4.5vw, 3rem);
+    font-weight: 400; color: var(--golden);
+    letter-spacing: .03em; text-transform: uppercase; line-height: 1.2;
+  }
+
+  /* Subtitle */
+  .hero-subtitle {
+    font-family: var(--font-body);
+    font-size: clamp(.95rem, 1.8vw, 1.15rem);
+    line-height: 1.7; color: rgba(255,255,255,.9);
+    max-width: 560px; font-weight: 300;
+  }
+  .hero-subtitle strong { color: var(--golden-light); font-weight: 500; }
+
+  /* Features */
+  .features-list { display: flex; flex-direction: column; gap: .65rem; list-style: none; padding: 0; margin: 0; }
+  .feature {
+    display: flex; align-items: center; gap: .75rem;
+    font-family: var(--font-body); font-size: 1rem;
+    color: rgba(255,255,255,.95); font-weight: 400;
+  }
+  .check-icon { width: 1.4rem; height: 1.4rem; color: var(--golden); flex-shrink: 0; }
+
+  /* CTA Buttons */
+  .cta-buttons { display: flex; flex-direction: column; gap: .875rem; padding-top: .5rem; }
+  @media (min-width: 640px) { .cta-buttons { flex-direction: row; flex-wrap: wrap; } }
+
+  .btn-primary {
+    display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+    padding: .9rem 1.75rem;
+    background: linear-gradient(135deg, var(--golden) 0%, var(--golden-dark) 100%);
+    color: #fff; font-family: var(--font-accent); font-size: .95rem; font-weight: 700;
+    text-transform: uppercase; text-decoration: none; border-radius: .375rem;
+    transition: transform .3s ease, box-shadow .3s ease;
+    letter-spacing: .05em; box-shadow: 0 4px 15px rgba(170,126,86,.3);
+    white-space: nowrap;
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(170,126,86,.4); }
+  .btn-icon { width: 1.2rem; height: 1.2rem; }
+
+  .btn-secondary {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: .9rem 1.75rem;
+    background: rgba(255,255,255,.1); color: #fff;
+    font-family: var(--font-accent); font-size: .95rem; font-weight: 700;
+    text-transform: uppercase; text-decoration: none; border-radius: .375rem;
+    border: 2px solid rgba(255,255,255,.2);
+    transition: all .3s ease; letter-spacing: .05em;
+    white-space: nowrap;
+  }
+  .btn-secondary:hover { background: rgba(255,255,255,.15); border-color: var(--golden); }
+
+  /* ─────────────────────────────────────────
+     COLUMNA DERECHA: FORMULARIO WHATSAPP
+  ───────────────────────────────────────── */
+  .form-card {
+    background: rgba(13,24,33,.55);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 1.25rem;
+    padding: 1.75rem;
+    box-shadow: 0 20px 60px rgba(0,0,0,.4);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  @media (min-width: 1024px) {
+    .form-card { padding: 2rem; }
+  }
+
+  /* Card header */
+  .form-card-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: .75rem;
+  }
+  .form-header-text {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .form-logo {
+    width: clamp(70px, 10vw, 110px);
+    height: auto;
+    flex-shrink: 0;
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,.4));
+  }
+
+  .form-badge {
+    display: inline-flex; align-items: center; gap: 7px;
+    background: rgba(37,211,102,.12);
+    border: 1px solid rgba(37,211,102,.3);
+    border-radius: 100px; padding: 5px 14px;
+    font-family: var(--font-heading); font-size: .68rem;
+    font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+    color: #25d366; width: fit-content;
+  }
+  .form-badge svg { flex-shrink: 0; fill: #25d366; }
+
+  .form-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    font-weight: 700; color: #fff; letter-spacing: .03em;
+    text-transform: uppercase; margin: 0;
+  }
+  .form-subtitle {
+    font-family: var(--font-body); font-size: .85rem;
+    color: rgba(255,255,255,.65); margin: 0; line-height: 1.5;
+  }
+
+  /* Form layout */
+  .hero-form { display: flex; flex-direction: column; gap: .65rem; }
+
+  .frow { display: flex; gap: .6rem; }
+  .frow.two { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; }
+
+  /* Inputs & select */
+  .hero-form input,
+  .hero-form select {
+    width: 100%; padding: .65rem .9rem;
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: .5rem; color: #fff;
+    font-family: var(--font-body); font-size: .875rem; font-weight: 400;
+    transition: border-color .25s, background .25s;
+    outline: none;
+    -webkit-appearance: none; appearance: none;
+  }
+  .hero-form input::placeholder { color: rgba(255,255,255,.4); }
+  .hero-form select { color: rgba(255,255,255,.85); cursor: pointer; }
+  .hero-form select option { background: #1e313f; color: #fff; }
+  .hero-form input:focus,
+  .hero-form select:focus {
+    border-color: rgba(204,163,115,.6);
+    background: rgba(255,255,255,.12);
+  }
+
+  /* WhatsApp submit button */
+  .btn-wa {
+    display: flex; align-items: center; justify-content: center; gap: .6rem;
+    width: 100%; padding: .95rem 1rem; margin-top: .35rem;
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    color: #fff; border: none; border-radius: .6rem; cursor: pointer;
+    font-family: var(--font-accent); font-size: 1rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: .05em;
+    box-shadow: 0 6px 20px rgba(37,211,102,.3);
+    transition: transform .25s, box-shadow .25s;
+  }
+  .btn-wa:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(37,211,102,.4); }
+  .btn-wa svg   { fill: #fff; flex-shrink: 0; }
+
+  /* Privacy note */
+  .form-privacy {
+    font-family: var(--font-body); font-size: .75rem;
+    color: rgba(255,255,255,.4); text-align: center; margin: 0; line-height: 1.5;
+  }
+
+  /* ── MOBILE: stack inputs full width on very small screens ── */
+  @media (max-width: 480px) {
+    .frow.two { grid-template-columns: 1fr; }
+  }
+
+  /* ──────────────────────────────────────
+     FORMULARIO PLEGABLE (solo mobile)
+  ────────────────────────────────────── */
+
+  /* Toggle button — visible only below desktop */
+  .form-toggle-btn {
+    display: none;
+  }
+  @media (max-width: 1023px) {
+    .form-toggle-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: .75rem 1rem;
+      background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+      border: none;
+      border-radius: .6rem;
+      color: #fff;
+      font-family: var(--font-accent);
+      font-size: .9rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(37,211,102,.30);
+      transition: box-shadow .25s ease, transform .2s ease;
+    }
+    .form-toggle-btn:hover {
+      box-shadow: 0 6px 20px rgba(37,211,102,.40);
+      transform: translateY(-1px);
+    }
+    .form-toggle-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .form-toggle-chevron {
+      transition: transform .35s cubic-bezier(.34,1.56,.64,1);
+      flex-shrink: 0;
+    }
+    .form-toggle-btn[aria-expanded="true"] .form-toggle-chevron {
+      transform: rotate(180deg);
+    }
+    /* Collapsed state */
+    .form-body {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height .45s cubic-bezier(.4,0,.2,1), opacity .35s ease;
+      display: flex;
+      flex-direction: column;
+      gap: .65rem;
+    }
+    /* Open state */
+    .form-body.is-open {
+      max-height: 900px;
+      opacity: 1;
+    }
+    /* Add spacing between toggle and fields when open */
+    .form-body.is-open { padding-top: .5rem; }
+  }
+  /* On desktop: form-body always fully visible */
+  @media (min-width: 1024px) {
+    .form-body {
+      display: flex;
+      flex-direction: column;
+      gap: .65rem;
+      max-height: none !important;
+      opacity: 1 !important;
+      overflow: visible !important;
+    }
+  }
+
+  /* ── RESPONSIVE TITLE ADJUSTMENTS ── */
+  @media (max-width: 640px) {
+    .title-line  { font-size: 1.4rem; }
+    .title-main  { font-size: 2rem; }
+    .title-brand { font-size: 1.6rem; }
+    .hero-subtitle { font-size: .95rem; }
+    .check-icon  { width: 1.2rem; height: 1.2rem; }
+    .btn-primary, .btn-secondary { padding: .8rem 1.4rem; font-size: .9rem; }
+  }
+</style>

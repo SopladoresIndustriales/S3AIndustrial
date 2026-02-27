@@ -1,0 +1,64 @@
+---
+// Hero Nosotros - Sección hero para página Nosotros
+---
+
+<section class="relative min-h-[80vh] lg:min-h-[85vh] flex items-center overflow-hidden bg-black pt-32 md:pt-36 lg:pt-44">
+  <!-- Background Video -->
+  <div class="absolute inset-0">
+    <video
+      class="w-full h-full object-cover"
+      src="/videos/logoAnimado.mp4"
+      autoplay
+      loop
+      muted
+      playsinline
+      aria-hidden="true"
+    ></video>
+  </div>
+  
+  <!-- Background pattern -->
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute inset-0" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(204, 163, 115, 0.05) 10px, rgba(204, 163, 115, 0.05) 20px);"></div>
+  </div>
+  
+  <!-- Content -->
+  <div class="w-full max-w-6xl mx-auto relative z-10" style="padding-left: clamp(2rem, 8vw, 7rem); padding-right: clamp(1.5rem, 5vw, 4rem);">
+    <div class="text-white">
+      <!-- Breadcrumb -->
+      <nav style="font-family: var(--font-body);" class="text-xs md:text-sm mb-5 opacity-80 tracking-widest uppercase flex items-center gap-2">
+        <a href="/" class="hover:text-white transition-colors font-medium text-white/70">Inicio</a>
+        <span class="text-white/40">•</span>
+        <span class="text-white font-semibold">Nosotros</span>
+      </nav>
+      
+      <!-- Title -->
+      <h1 style="
+        font-family: var(--font-display);
+        letter-spacing: 0.03em;
+        background: linear-gradient(135deg, #ffffff 0%, #b0c8d8 50%, #334c60 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        filter: drop-shadow(0 2px 16px rgba(0,0,0,0.8));
+      " class="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-normal mb-6 leading-none uppercase">
+        Quiénes Somos
+      </h1>
+
+      <!-- Accent line -->
+      <div class="w-20 h-[3px] mb-6" style="background: linear-gradient(90deg, #ffffff, #334c60);"></div>
+      
+      <!-- Subtitle -->
+      <p style="font-family: var(--font-body); text-shadow: 0 1px 8px rgba(0,0,0,0.8);" class="text-base md:text-lg lg:text-xl max-w-xl leading-relaxed font-light text-white/90">
+        Conoce la historia, experiencia y valores que nos convierten en especialistas 
+        en reparación y mantenimiento de sopladores industriales.
+      </p>
+    </div>
+  </div>
+  
+  <!-- Golden bottom separator -->
+  <div class="absolute bottom-0 left-0 right-0 h-[3px]" style="background: linear-gradient(90deg, transparent 0%, #aa7e56 30%, #cca373 60%, #aa7e56 80%, transparent 100%);"></div>
+</section>
+
+<style>
+  /* sin estilos adicionales necesarios */
+</style>

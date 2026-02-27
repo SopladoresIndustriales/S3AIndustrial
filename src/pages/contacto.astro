@@ -1,0 +1,29 @@
+---
+// Página Contacto - Contáctenos
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import HeroContacto from '../components/HeroContacto.astro';
+import ContactForm from '../components/ContactForm.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Contacto | S3A Industrial — Solicitá tu Servicio Técnico de Sopladores"
+  description="Contáctá a S3A Industrial para reparación y mantenimiento de sopladores industriales. Completá el formulario, escribínos por WhatsApp o llamános. Respuesta rápida y atención personalizada."
+  canonicalURL="https://s3aindustrial.com/contacto"
+>
+  <!-- Header fijo -->
+  <Header />
+  
+  <!-- Main content -->
+  <main>
+    <!-- Hero Section -->
+    <HeroContacto />
+    
+    <!-- Contact Form Section -->
+    <ContactForm />
+    
+    <!-- Footer -->
+    <Footer />
+  </main>
+</Layout>

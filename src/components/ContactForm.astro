@@ -1,0 +1,1216 @@
+---
+// ContactForm Component - Tailwind structure + CSS personalizado inline
+---
+
+<section id="contacto" class="cf-section">
+  <!-- Top gold edge -->
+  <div class="cf-edge-top"></div>
+
+  <div class="container mx-auto px-6 sm:px-8 lg:px-10 xl:px-12 max-w-6xl">
+    
+    <!-- Section Header -->
+    <div class="cf-header animate-on-scroll">
+      <!-- Eyebrow -->
+      <div class="cf-eyebrow">
+        <span class="cf-eyebrow-rule"></span>
+        <span class="cf-eyebrow-text">Hablemos</span>
+        <span class="cf-eyebrow-rule"></span>
+      </div>
+
+      <h2 class="cf-title">
+        <em>Contáctenos</em>
+      </h2>
+      <div class="cf-scratch"></div>
+      <p class="cf-subtitle">
+        Complete el formulario y nuestro equipo técnico se comunicará con usted a la brevedad.
+      </p>
+    </div>
+    
+    <!-- Grid de formulario e info - Tailwind responsive -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12 xl:gap-14">
+      
+      <!-- Formulario - Columna principal -->
+      <div class="lg:col-span-2 animate-on-scroll">
+        <div class="form-card">
+
+          <!-- ── TABS ── -->
+          <div class="cf-tabs" role="tablist">
+            <button type="button" class="cf-tab cf-tab--active" data-tab="email" id="tabEmail" role="tab" aria-selected="true" aria-controls="panelEmail">
+              <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              Correo Electrónico
+            </button>
+            <button type="button" class="cf-tab" data-tab="wa" id="tabWA" role="tab" aria-selected="false" aria-controls="panelWA">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.525 5.845L.057 23.986l6.306-1.452A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.013-1.374l-.36-.213-3.737.859.882-3.626-.234-.372A9.818 9.818 0 1112 21.818z"/></svg>
+              WhatsApp
+            </button>
+          </div>
+
+          <!-- ── PANEL EMAIL ── -->
+          <div id="panelEmail" class="cf-panel cf-panel--active" role="tabpanel" aria-labelledby="tabEmail">
+        <form id="contact-form" class="space-y-4 md:space-y-5">
+          
+          <!-- Grid de 2 columnas - Tailwind -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
+            <!-- Nombre -->
+            <div class="form-group">
+              <label for="nombre" class="contact-label">Nombre Completo *</label>
+              <input 
+                type="text" 
+                id="nombre" 
+                name="nombre" 
+                class="contact-input" 
+                required
+                placeholder="Ej: Juan Pérez"
+              />
+              <span class="error-message hidden" id="nombre-error"></span>
+            </div>
+            
+            <!-- Empresa -->
+            <div class="form-group">
+              <label for="empresa" class="contact-label">Empresa *</label>
+              <input 
+                type="text" 
+                id="empresa" 
+                name="empresa" 
+                class="contact-input" 
+                required
+                placeholder="Ej: Industrias XYZ"
+              />
+              <span class="error-message hidden" id="empresa-error"></span>
+            </div>
+          </div>
+          
+          <!-- Email y Teléfono -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
+            <!-- Email -->
+            <div class="form-group">
+              <label for="email" class="contact-label">Email *</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                class="contact-input" 
+                required
+                placeholder="correo@empresa.com"
+              />
+              <span class="error-message hidden" id="email-error"></span>
+            </div>
+            
+            <!-- Teléfono -->
+            <div class="form-group">
+              <label for="telefono" class="contact-label">Teléfono *</label>
+              <input 
+                type="tel" 
+                id="telefono" 
+                name="telefono" 
+                class="contact-input" 
+                required
+                placeholder="+1 (234) 567-890"
+              />
+              <span class="error-message hidden" id="telefono-error"></span>
+            </div>
+          </div>
+          
+          <!-- Tipo de servicio -->
+          <div class="form-group">
+            <label for="servicio" class="contact-label">Tipo de Servicio Requerido *</label>
+            <select id="servicio" name="servicio" class="contact-select" required>
+              <option value="">Seleccione un servicio...</option>
+              <option value="reparacion">Reparación de Sopladores</option>
+              <option value="preventivo">Mantenimiento Preventivo</option>
+              <option value="correctivo">Mantenimiento Correctivo</option>
+              <option value="emergencia">Servicio de Emergencia</option>
+              <option value="cotizacion">Cotización General</option>
+              <option value="otro">Otro</option>
+            </select>
+            <span class="error-message hidden" id="servicio-error"></span>
+          </div>
+          
+          <!-- Mensaje -->
+          <div class="form-group">
+            <label for="mensaje" class="contact-label">Mensaje * </label>
+            <textarea 
+              id="mensaje" 
+              name="mensaje" 
+              class="contact-textarea" 
+              required
+              placeholder="Describa brevemente su necesidad o consulta..."
+            ></textarea>
+            <span class="error-message hidden" id="mensaje-error"></span>
+          </div>
+          
+          <!-- Botón submit -->
+          <div>
+            <button type="submit" class="contact-submit">
+              Enviar Consulta
+            </button>
+          </div>
+          
+          <!-- Mensaje de éxito -->
+          <div id="success-message" class="hidden bg-green-50 border-l-4 border-green-500 p-4 rounded-lg">
+            <div class="flex items-center">
+              <svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <p class="text-green-700 font-medium">
+                ¡Gracias por contactarnos! Nos comunicaremos con usted a la brevedad.
+              </p>
+            </div>
+          </div>
+        </form>
+          </div><!-- /panelEmail -->
+
+          <!-- ── PANEL WHATSAPP ── -->
+          <div id="panelWA" class="cf-panel" role="tabpanel" aria-labelledby="tabWA">
+            <p class="cf-wa-intro">Completá los datos y se abrirá WhatsApp con el mensaje listo para enviar.</p>
+            <form id="contactWAForm" class="cf-wa-form" data-wa="5491124599330">
+
+              <div class="cf-wa-row">
+                <div class="cf-wa-group">
+                  <label class="cf-wa-label">Nombre y Apellido *</label>
+                  <input type="text" name="nombre" class="cf-wa-input" placeholder="Ej: Juan Pérez" required />
+                </div>
+              </div>
+
+              <div class="cf-wa-row cf-wa-row--two">
+                <div class="cf-wa-group">
+                  <label class="cf-wa-label">Empresa *</label>
+                  <input type="text" name="empresa" class="cf-wa-input" placeholder="Ej: Industrias XYZ" required />
+                </div>
+                <div class="cf-wa-group">
+                  <label class="cf-wa-label">Sector / Rubro</label>
+                  <input type="text" name="sector" class="cf-wa-input" placeholder="Ej: Alimenticio" />
+                </div>
+              </div>
+
+              <div class="cf-wa-row cf-wa-row--two">
+                <div class="cf-wa-group">
+                  <label class="cf-wa-label">Email *</label>
+                  <input type="email" name="email" class="cf-wa-input" placeholder="correo@empresa.com" required />
+                </div>
+                <div class="cf-wa-group">
+                  <label class="cf-wa-label">Celular *</label>
+                  <input type="tel" name="cel" class="cf-wa-input" placeholder="Ej: 11 1234-5678" required />
+                </div>
+              </div>
+
+              <div class="cf-wa-row cf-wa-row--two">
+                <div class="cf-wa-group">
+                  <label class="cf-wa-label">Localidad</label>
+                  <input type="text" name="localidad" class="cf-wa-input" placeholder="Ej: La Plata" />
+                </div>
+                <div class="cf-wa-group">
+                  <label class="cf-wa-label">Provincia</label>
+                  <input type="text" name="provincia" class="cf-wa-input" placeholder="Ej: Buenos Aires" />
+                </div>
+              </div>
+
+              <div class="cf-wa-row">
+                <div class="cf-wa-group">
+                  <label class="cf-wa-label">Tipo de Equipo *</label>
+                  <select name="equipo" class="cf-wa-input" required>
+                    <option value="" disabled selected>Seleccione el equipo...</option>
+                    <option value="Soplador de Lóbulos (Roots Blower)">Soplador de Lóbulos (Roots Blower)</option>
+                    <option value="Soplador de Canal Lateral / Regenerativo">Soplador de Canal Lateral / Regenerativo</option>
+                    <option value="Soplador Centrífugo">Soplador Centrífugo</option>
+                    <option value="Compresor de Tornillo">Compresor de Tornillo</option>
+                    <option value="Compresor de Pistón / Alternativo">Compresor de Pistón / Alternativo</option>
+                    <option value="Bomba de Vacío Industrial">Bomba de Vacío Industrial</option>
+                    <option value="Otro equipo">Otro equipo</option>
+                  </select>
+                </div>
+              </div>
+
+              <button type="submit" class="cf-wa-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                  <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.525 5.845L.057 23.986l6.306-1.452A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.013-1.374l-.36-.213-3.737.859.882-3.626-.234-.372A9.818 9.818 0 1112 21.818z"/>
+                </svg>
+                Enviar por WhatsApp
+              </button>
+
+            </form>
+            <p class="cf-wa-privacy">🔒 Tus datos son confidenciales. Solo se usan para contactarte.</p>
+          </div><!-- /panelWA -->
+
+        </div><!-- /form-card -->
+      </div>
+      
+      <!-- Información de contacto - sidebar premium -->
+      <div class="lg:col-span-1 animate-on-scroll delay-200">
+        
+        <!-- Info box -->
+        <div class="cf-info-box">
+          <div class="cf-info-box-header">
+            <span class="cf-info-box-tag">Contacto Directo</span>
+          </div>
+
+          <!-- Teléfono -->
+          <div class="cf-info-item">
+            <div class="cf-info-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+              </svg>
+            </div>
+            <div class="cf-info-content">
+              <h3 class="cf-info-label">Teléfono</h3>
+              <a href="https://wa.me/5491124599330" class="cf-info-link" target="_blank" rel="noopener noreferrer">+54 9 11 2459-9330</a>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="cf-info-item">
+            <div class="cf-info-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+            <div class="cf-info-content">
+              <h3 class="cf-info-label">Email</h3>
+              <a href="mailto:info@s3aindustrial.com" class="cf-info-link">info@s3aindustrial.com</a>
+            </div>
+          </div>
+
+          <!-- Horario -->
+          <div class="cf-info-item">
+            <div class="cf-info-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <div class="cf-info-content">
+              <h3 class="cf-info-label">Horario de Atención</h3>
+              <p class="cf-info-text">
+                Lun–Vie: 8:00 – 18:00<br/>
+                Sáb: 9:00 – 13:00
+              </p>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Especialistas -->
+        <div class="cf-cta-box">
+
+          <!-- Icono decorativo esquina -->
+          <div class="cf-cta-gear" aria-hidden="true">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+
+          <span class="cf-cta-tag">Atención Personalizada</span>
+          <h3 class="cf-cta-title">¿Prefiere hablar con un especialista?</h3>
+          <p class="cf-cta-text">
+            Nuestro equipo técnico lo asesora sobre el servicio más adecuado para sus equipos y proceso productivo.
+          </p>
+
+          <div class="cf-cta-actions">
+            <a href="https://wa.me/5491124599330" class="cf-cta-call" target="_blank" rel="noopener noreferrer">
+              <svg width="17" height="17" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              Hablar con un Técnico
+            </a>
+            <a href="https://wa.me/5491124599330" class="cf-cta-wa" target="_blank" rel="noopener">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.525 5.845L.057 23.986l6.306-1.452A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.013-1.374l-.36-.213-3.737.859.882-3.626-.234-.372A9.818 9.818 0 1112 21.818z"/>
+              </svg>
+              WhatsApp
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* ============================================
+   CONTACT FORM - Sección completa
+   ============================================ */
+
+/* Section background */
+.cf-section {
+  position: relative;
+  padding: 100px 0 110px;
+  background: linear-gradient(170deg, #f7f4ef 0%, #f0ece4 50%, #f4f1ec 100%);
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .cf-section { padding: 70px 0 80px; }
+}
+
+/* Top golden edge */
+.cf-edge-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, #aa7e56 30%, #cca373 60%, #aa7e56 80%, transparent 100%);
+}
+
+/* ----- HEADER ----- */
+.cf-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 3.5rem;
+  overflow: visible;
+}
+
+.cf-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.cf-eyebrow-rule {
+  flex: 1;
+  max-width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #aa7e56);
+}
+
+.cf-eyebrow-rule:last-child {
+  background: linear-gradient(90deg, #aa7e56, transparent);
+}
+
+.cf-eyebrow-text {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #aa7e56;
+}
+
+.cf-title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #1e313f;
+  margin-bottom: 0.6rem;
+  overflow: visible;
+}
+
+.cf-title em {
+  font-style: italic;
+  display: inline-block;
+  padding-right: 0.12em;
+  background: linear-gradient(135deg, #aa7e56 0%, #cca373 50%, #8b6644 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cf-scratch {
+  width: 64px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #aa7e56, #cca373);
+  margin: 0 auto 1.2rem;
+}
+
+.cf-subtitle {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: #334c60;
+  line-height: 1.65;
+  font-weight: 300;
+  opacity: 0.85;
+}
+
+/* ----- FORM WRAPPER ----- */
+.form-card {
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid rgba(170, 126, 86, 0.15);
+  box-shadow: 0 4px 32px rgba(30, 49, 63, 0.07);
+  padding: 2.2rem 2rem;
+}
+
+@media (max-width: 640px) {
+  .form-card { padding: 1.5rem 1.2rem; }
+}
+
+/* Input fields con bordes animados */
+.contact-input,
+.contact-textarea,
+.contact-select {
+  width: 100%;
+  padding: 0.78rem 1rem;
+  border: 1.5px solid #d6cec5;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: #1e313f;
+  background: #fafaf8;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.contact-input::placeholder,
+.contact-textarea::placeholder {
+  color: #9ba8b4;
+  font-size: 0.9rem;
+}
+
+.contact-input:focus,
+.contact-textarea:focus,
+.contact-select:focus {
+  outline: none;
+  background: #fff;
+  border-color: #aa7e56;
+  box-shadow: 
+    0 0 0 3px rgba(170, 126, 86, 0.14),
+    0 2px 10px rgba(170, 126, 86, 0.10);
+  transform: translateY(-1px);
+}
+
+.contact-input:hover,
+.contact-textarea:hover,
+.contact-select:hover {
+  border-color: #aa7e56;
+}
+
+/* Textarea específicamente */
+.contact-textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+/* Label con animación */
+.contact-label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  font-family: var(--font-heading);
+  color: #1e313f;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.contact-input:focus + .contact-label,
+.contact-textarea:focus + .contact-label,
+.contact-select:focus + .contact-label {
+  color: #aa7e56;
+}
+
+/* Form group container */
+.form-group {
+  margin-bottom: 0;
+  position: relative;
+}
+
+/* Input con ícono */
+.input-with-icon {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-gray-medium);
+  transition: color 0.3s ease;
+  pointer-events: none;
+}
+
+.input-with-icon .contact-input {
+  padding-left: 3rem;
+}
+
+.input-with-icon .contact-input:focus ~ .input-icon {
+  color: var(--color-primary);
+}
+
+/* Botón submit con loading effect */
+.contact-submit {
+  width: 100%;
+  padding: 0.95rem 1.5rem;
+  font-size: 1rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #aa7e56 0%, #8b6644 60%, #7b5433 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(170, 126, 86, 0.35);
+  margin-bottom: 0;
+}
+
+.contact-submit::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.contact-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(170, 126, 86, 0.45);
+}
+
+.contact-submit:hover::before {
+  left: 100%;
+}
+
+.contact-submit:active {
+  transform: translateY(0);
+}
+
+.contact-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Loading state */
+.contact-submit.loading {
+  pointer-events: none;
+}
+
+.contact-submit.loading::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: var(--color-white);
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@keyframes spin {
+  to {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+/* Validation states */
+.contact-input.error,
+.contact-textarea.error,
+.contact-select.error {
+  border-color: #dc2626;
+}
+
+.contact-input.success,
+.contact-textarea.success,
+.contact-select.success {
+  border-color: #16a34a;
+}
+
+.error-message {
+  color: #dc2626;
+  font-size: 0.875rem;
+  margin-top: 0.375rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  animation: fadeIn 0.3s ease;
+}
+
+.success-message {
+  color: #16a34a;
+  font-size: 0.875rem;
+  margin-top: 0.375rem;
+  animation: fadeIn 0.3s ease;
+}
+
+/* ----- INFO BOX ----- */
+.cf-info-box {
+  background: #fff;
+  border: 1px solid rgba(170, 126, 86, 0.18);
+  border-radius: 16px;
+  padding: 1.8rem 1.6rem 1.4rem;
+  margin-bottom: 1.4rem;
+  box-shadow: 0 4px 20px rgba(30, 49, 63, 0.07);
+}
+
+.cf-info-box-header {
+  margin-bottom: 1.4rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(170, 126, 86, 0.15);
+}
+
+.cf-info-box-tag {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #aa7e56;
+}
+
+.cf-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.4rem;
+}
+
+.cf-info-item:last-child {
+  margin-bottom: 0;
+}
+
+.cf-info-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #1e313f, #334c60);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+  box-shadow: 0 3px 10px rgba(30, 49, 63, 0.18);
+}
+
+.cf-info-icon svg {
+  width: 20px;
+  height: 20px;
+  color: #cca373;
+}
+
+.cf-info-item:hover .cf-info-icon {
+  transform: scale(1.08);
+}
+
+.cf-info-label {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #aa7e56;
+  margin-bottom: 0.3rem;
+}
+
+.cf-info-link {
+  color: #1e313f;
+  font-size: 0.92rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.25s;
+}
+
+.cf-info-link:hover {
+  color: #aa7e56;
+  text-decoration: underline;
+}
+
+.cf-info-text {
+  color: #334c60;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  margin-bottom: 0.5rem;
+}
+
+.cf-info-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #aa7e56, #8b6644);
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.7rem;
+  border-radius: 20px;
+}
+
+/* ----- CTA ESPECIALISTAS ----- */
+.cf-cta-box {
+  position: relative;
+  background: linear-gradient(145deg, #13202a 0%, #1a2d3a 60%, #1e3040 100%);
+  border-radius: 16px;
+  padding: 2.2rem 1.8rem 1.8rem;
+  color: #fff;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(13, 24, 33, 0.25);
+}
+
+.cf-cta-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #aa7e56, #cca373, #aa7e56);
+}
+
+/* Gear decoration top-right */
+.cf-cta-gear {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  opacity: 0.07;
+  color: #cca373;
+  pointer-events: none;
+}
+.cf-cta-gear svg {
+  width: 96px;
+  height: 96px;
+  stroke: #cca373;
+}
+
+.cf-cta-tag {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #cca373;
+  background: rgba(170, 126, 86, 0.15);
+  border: 1px solid rgba(204, 163, 115, 0.25);
+  padding: 0.25rem 0.75rem;
+  border-radius: 100px;
+  margin-bottom: 1rem;
+}
+
+.cf-cta-title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.cf-cta-text {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.68);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+
+.cf-cta-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.cf-cta-call {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  padding: 0.85rem 1.25rem;
+  background: linear-gradient(135deg, #aa7e56 0%, #8b6644 100%);
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(170, 126, 86, 0.3);
+}
+.cf-cta-call svg { flex-shrink: 0; }
+.cf-cta-call:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(170, 126, 86, 0.45);
+}
+
+.cf-cta-wa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  padding: 0.8rem 1.25rem;
+  background: rgba(37, 211, 102, 0.12);
+  color: #4ade80;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 1px solid rgba(37, 211, 102, 0.3);
+  transition: all 0.3s ease;
+}
+.cf-cta-wa svg { flex-shrink: 0; fill: #4ade80; }
+.cf-cta-wa:hover {
+  background: rgba(37, 211, 102, 0.2);
+  border-color: rgba(37, 211, 102, 0.5);
+  transform: translateY(-2px);
+}
+
+/* ----- TABS ----- */
+.cf-tabs {
+  display: flex;
+  gap: 0;
+  border-radius: 10px;
+  background: #f0ece4;
+  padding: 4px;
+  margin-bottom: 1.75rem;
+  border: 1px solid rgba(170, 126, 86, 0.15);
+}
+
+.cf-tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1rem;
+  border: none;
+  border-radius: 7px;
+  background: transparent;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6b7a87;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.cf-tab svg {
+  flex-shrink: 0;
+  opacity: 0.6;
+  transition: opacity 0.25s;
+}
+
+.cf-tab:hover {
+  color: #1e313f;
+}
+.cf-tab:hover svg { opacity: 0.85; }
+
+.cf-tab--active {
+  background: #fff;
+  color: #1e313f;
+  box-shadow: 0 2px 8px rgba(30, 49, 63, 0.1);
+}
+.cf-tab--active svg { opacity: 1; }
+
+/* WA tab active gets green accent */
+.cf-tab[data-tab="wa"].cf-tab--active {
+  color: #128c7e;
+}
+.cf-tab[data-tab="wa"].cf-tab--active svg { fill: #25d366; }
+
+/* ----- PANELS ----- */
+.cf-panel {
+  display: none;
+}
+.cf-panel--active {
+  display: block;
+}
+
+/* ----- WA FORM ----- */
+.cf-wa-intro {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  color: #334c60;
+  line-height: 1.6;
+  margin-bottom: 1.4rem;
+  padding: 0.85rem 1rem;
+  background: rgba(37, 211, 102, 0.07);
+  border-left: 3px solid #25d366;
+  border-radius: 0 8px 8px 0;
+}
+
+.cf-wa-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.cf-wa-row {
+  display: flex;
+  gap: 0.75rem;
+}
+.cf-wa-row--two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+@media (max-width: 480px) {
+  .cf-wa-row--two { grid-template-columns: 1fr; }
+}
+
+.cf-wa-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  flex: 1;
+}
+
+.cf-wa-label {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1e313f;
+}
+
+.cf-wa-input {
+  width: 100%;
+  padding: 0.72rem 0.9rem;
+  border: 1.5px solid #d6cec5;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  font-family: inherit;
+  color: #1e313f;
+  background: #fafaf8;
+  transition: all 0.25s ease;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.cf-wa-input::placeholder {
+  color: #9ba8b4;
+  font-size: 0.88rem;
+}
+.cf-wa-input:focus {
+  background: #fff;
+  border-color: #25d366;
+  box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.12), 0 2px 8px rgba(37, 211, 102, 0.08);
+  transform: translateY(-1px);
+}
+.cf-wa-input:hover {
+  border-color: #7ecbb0;
+}
+
+.cf-wa-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  margin-top: 0.4rem;
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.cf-wa-btn svg { fill: #fff; flex-shrink: 0; }
+.cf-wa-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(37, 211, 102, 0.4);
+}
+.cf-wa-btn:active { transform: translateY(0); }
+
+.cf-wa-privacy {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: #8a9aaa;
+  text-align: center;
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+/* legacy compat */
+.contact-info-box { display: none; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-submit {
+    font-size: 0.95rem;
+    padding: 0.95rem;
+  }
+  .cf-info-box {
+    padding: 1.4rem 1.2rem 1rem;
+  }
+}
+</style>
+
+<!-- Script de validación y submit - JavaScript vanilla -->
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  const submitButton = form?.querySelector('button[type="submit"]') as HTMLButtonElement;
+  const successMessage = document.getElementById('success-message');
+  
+  // Validación en tiempo real
+  const inputs = form?.querySelectorAll('input, textarea, select');
+  inputs?.forEach(input => {
+    input.addEventListener('blur', () => validateField(input as HTMLInputElement));
+    input.addEventListener('input', () => {
+      const errorElement = document.getElementById(`${input.id}-error`);
+      if (errorElement && !errorElement.classList.contains('hidden')) {
+        validateField(input as HTMLInputElement);
+      }
+    });
+  });
+  
+  function validateField(field: HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement): boolean {
+    const errorElement = document.getElementById(`${field.id}-error`);
+    let errorMessage = '';
+    
+    if (field.hasAttribute('required') && !field.value.trim()) {
+      errorMessage = 'Este campo es requerido';
+    } else if (field.type === 'email' && field.value) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(field.value)) {
+        errorMessage = 'Ingrese un email válido';
+      }
+    } else if (field.type === 'tel' && field.value) {
+      const phoneRegex = /^[\d\s\+\-\(\)]+$/;
+      if (!phoneRegex.test(field.value)) {
+        errorMessage = 'Ingrese un teléfono válido';
+      }
+    }
+    
+    if (errorElement) {
+      if (errorMessage) {
+        errorElement.textContent = errorMessage;
+        errorElement.classList.remove('hidden');
+        field.classList.add('error');
+        field.classList.remove('success');
+        return false;
+      } else {
+        errorElement.classList.add('hidden');
+        field.classList.remove('error');
+        field.classList.add('success');
+        return true;
+      }
+    }
+    
+    return !errorMessage;
+  }
+  
+  // ── TAB SWITCHER ──
+  const tabs = document.querySelectorAll('.cf-tab');
+  const panels = document.querySelectorAll('.cf-panel');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = (tab as HTMLElement).dataset.tab;
+      tabs.forEach(t => {
+        t.classList.remove('cf-tab--active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      panels.forEach(p => p.classList.remove('cf-panel--active'));
+      tab.classList.add('cf-tab--active');
+      tab.setAttribute('aria-selected', 'true');
+      document.getElementById(target === 'wa' ? 'panelWA' : 'panelEmail')?.classList.add('cf-panel--active');
+    });
+  });
+
+  // ── WHATSAPP FORM SUBMIT ──
+  const waForm = document.getElementById('contactWAForm') as HTMLFormElement | null;
+  if (waForm) {
+    waForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const d = new FormData(waForm);
+      const get = (k: string) => (d.get(k) as string || '').trim();
+      const nombre    = get('nombre');
+      const empresa   = get('empresa');
+      const sector    = get('sector');
+      const email     = get('email');
+      const cel       = get('cel');
+      const localidad = get('localidad');
+      const provincia = get('provincia');
+      const equipo    = get('equipo');
+      const msg =
+`\uD83D\uDD27 *SOLICITUD DE PRESUPUESTO - S3A Industrial*
+
+\uD83D\uDC64 *Nombre:* ${nombre}
+\uD83C\uDFED *Empresa:* ${empresa}${sector ? `\n\uD83D\uDCC2 *Sector:* ${sector}` : ''}
+\uD83D\uDCE7 *Email:* ${email}
+\uD83D\uDCF1 *Celular:* ${cel}${localidad ? `\n\uD83D\uDCCD *Localidad:* ${localidad}` : ''}${provincia ? ` - ${provincia}` : ''}
+\u2699\uFE0F *Equipo:* ${equipo}
+
+Hola, me comunico desde el sitio web para solicitar un presupuesto. Quedo a disposici\u00f3n para coordinar. \u00a1Gracias!`;
+      const waNumber = (waForm.dataset.wa || '').replace(/\D/g, '');
+      const url = `https://wa.me/${waNumber}?text=${encodeURIComponent(msg)}`;
+      window.open(url, '_blank');
+    });
+  }
+
+  // Submit del formulario
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    // Validar todos los campos
+    let isValid = true;
+    inputs?.forEach(input => {
+      if (!validateField(input as HTMLInputElement)) {
+        isValid = false;
+      }
+    });
+    
+    if (!isValid) {
+      return;
+    }
+    
+    // Mostrar estado de loading
+    submitButton.classList.add('loading');
+    submitButton.disabled = true;
+    
+    // Simular envío (aquí integrarías con tu backend o servicio de email)
+    setTimeout(() => {
+      // Mostrar mensaje de éxito
+      successMessage?.classList.remove('hidden');
+      form.reset();
+      
+      // Remover clases de success de los campos
+      inputs?.forEach(input => {
+        input.classList.remove('success', 'error');
+      });
+      
+      // Remover estado de loading
+      submitButton.classList.remove('loading');
+      submitButton.disabled = false;
+      
+      // Ocultar mensaje después de 5 segundos
+      setTimeout(() => {
+        successMessage?.classList.add('hidden');
+      }, 5000);
+      
+      // Scroll al mensaje de éxito
+      successMessage?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }, 2000);
+  });
+</script>

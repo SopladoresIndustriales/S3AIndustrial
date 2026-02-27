@@ -1,0 +1,84 @@
+---
+// Hero Servicios - Sección hero para página Servicios
+---
+
+<section class="relative min-h-[80vh] lg:min-h-[85vh] flex items-center overflow-hidden bg-black pt-32 md:pt-36 lg:pt-44">
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <!-- Desktop image -->
+    <img src="/imagenes/S3AImagnes/repickydesktop5.png" alt="Servicios Industriales" class="hero-img hero-img--desktop w-full h-full object-cover opacity-60" style="object-position: center 0%;" />
+    <!-- Mobile image: portrait ~800×1200px, poné el archivo en /imagenes/S3AImagnes/ -->
+    <img src="/imagenes/S3AImagnes/repicky23.png" alt="Servicios Industriales" class="hero-img hero-img--mobile w-full h-full object-cover opacity-60" style="object-position: center center;" />
+    <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
+  </div>
+  
+  <!-- Background pattern -->
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute inset-0" style="background-image: repeating-linear-gradient(90deg, transparent, transparent 15px, rgba(170, 126, 86, 0.08) 15px, rgba(170, 126, 86, 0.08) 30px);"></div>
+  </div>
+  
+  <!-- Content -->
+  <div class="w-full max-w-6xl mx-auto relative z-10" style="padding-left: clamp(2rem, 8vw, 7rem); padding-right: clamp(1.5rem, 5vw, 4rem);">
+    <div class="text-white">
+      <!-- Breadcrumb -->
+      <nav style="font-family: var(--font-body);" class="text-xs md:text-sm mb-5 opacity-80 tracking-widest uppercase flex items-center gap-2">
+        <a href="/" class="hover:text-white transition-colors font-medium text-white/70">Inicio</a>
+        <span class="text-white/40">•</span>
+        <span class="text-white font-semibold">Servicios</span>
+      </nav>
+      
+      <!-- Title -->
+      <h1 style="
+        font-family: var(--font-display);
+        letter-spacing: 0.03em;
+        background: linear-gradient(135deg, #ffffff 0%, #b0c8d8 50%, #334c60 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        filter: drop-shadow(0 2px 16px rgba(0,0,0,0.8));
+      " class="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-normal mb-6 leading-none uppercase">
+        Nuestros Servicios
+      </h1>
+
+      <!-- Accent line -->
+      <div class="w-20 h-[3px] mb-6" style="background: linear-gradient(90deg, #ffffff, #334c60);"></div>
+      
+      <!-- Subtitle -->
+      <p style="font-family: var(--font-body); text-shadow: 0 1px 8px rgba(0,0,0,0.8);" class="text-base md:text-lg lg:text-xl max-w-xl mb-8 leading-relaxed font-light text-white/90">
+        Soluciones integrales en reparación, mantenimiento preventivo y correctivo 
+        de sopladores industriales con servicio técnico especializado.
+      </p>
+      
+      <!-- Service highlights -->
+      <div style="font-family: var(--font-heading);" class="flex flex-wrap gap-3 md:gap-4 text-sm md:text-base font-semibold uppercase tracking-wider">
+        <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur">
+          <div class="w-2 h-2 bg-golden-light rounded-full"></div>
+          <span>Reparación Integral</span>
+        </div>
+        <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur">
+          <div class="w-2 h-2 bg-golden rounded-full"></div>
+          <span>Mantenimiento Preventivo</span>
+        </div>
+        <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur">
+          <div class="w-2 h-2 bg-white/60 rounded-full"></div>
+          <span>Servicio Correctivo</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Golden bottom separator -->
+  <div class="absolute bottom-0 left-0 right-0 h-[3px]" style="background: linear-gradient(90deg, transparent 0%, #aa7e56 30%, #cca373 60%, #aa7e56 80%, transparent 100%);"></div>
+</section>
+
+<style>
+  /* Mobile: mostrar imagen mobile, ocultar desktop */
+  .hero-img--desktop { display: none; }
+  .hero-img--mobile  { display: block; }
+
+  /* Desktop: mostrar imagen desktop, ocultar mobile */
+  @media (min-width: 1024px) {
+    .hero-img--desktop { display: block; }
+    .hero-img--mobile  { display: none; }
+  }
+</style>

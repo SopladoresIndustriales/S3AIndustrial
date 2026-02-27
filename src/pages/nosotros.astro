@@ -1,0 +1,29 @@
+---
+// Página Nosotros - Quiénes Somos
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import HeroNosotros from '../components/HeroNosotros.astro';
+import About from '../components/About.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Quiénes Somos | S3A Industrial — Empresa Especialista en Sopladores Industriales"
+  description="Conocé S3A Industrial: empresa argentina especializada en sopladores industriales con experiencia comprobada. Equipo técnico capacitado, enfoque preventivo y compromiso con la continuidad operativa de tu planta."
+  canonicalURL="https://s3aindustrial.com/nosotros"
+>
+  <!-- Header fijo -->
+  <Header />
+  
+  <!-- Main content -->
+  <main>
+    <!-- Hero Section -->
+    <HeroNosotros />
+    
+    <!-- About Section -->
+    <About />
+    
+    <!-- Footer -->
+    <Footer />
+  </main>
+</Layout>

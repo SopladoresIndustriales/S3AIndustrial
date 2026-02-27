@@ -1,0 +1,656 @@
+---
+// Header Component - Navegación industrial moderna con panel lateral mobile
+---
+
+<!-- Overlay para el menú mobile -->
+<div id="mobile-overlay" class="fixed inset-0 z-40 opacity-0 pointer-events-none lg:hidden" style="background:rgba(10,18,25,0.65);backdrop-filter:blur(3px);transition:opacity .35s ease"></div>
+
+<!-- Header industrial con glassmorphism refinado -->
+<header class="fixed w-full top-0 z-50 transition-all duration-500" id="header">
+  <!-- Barra superior industrial con acento de color -->
+  <div class="header-top-bar absolute top-0 left-0 right-0 h-[3px]" id="header-gradient"></div>
+
+  <nav class="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 max-w-7xl">
+    <div class="flex items-center justify-between h-[76px] lg:h-[88px]">
+
+      <!-- ── Logo ── -->
+      <a href="/" class="flex items-center gap-3 logo-link group relative z-10 shrink-0">
+        <img
+          src="/logo/logo2.svg"
+          alt="S3A Industrial Logo"
+          class="h-20 w-20 lg:h-24 lg:w-24 object-contain transition-transform duration-500 group-hover:scale-110 shrink-0"
+        />
+        <div class="flex flex-col leading-none">
+          <span class="text-[13px] lg:text-sm font-black text-gray-900 tracking-tight uppercase logo-name">
+            S3A Industrial
+          </span>
+          <span class="text-[10px] lg:text-[11px] text-rust font-semibold tracking-widest uppercase mt-0.5 logo-sub">
+            Sopladores&nbsp;&amp;&nbsp;Servicios
+          </span>
+        </div>
+      </a>
+
+      <!-- ── Desktop Nav ── -->
+      <ul class="hidden lg:flex items-center gap-1">
+        <li>
+          <a href="/" class="nav-link" data-page="/">
+            <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Inicio
+          </a>
+        </li>
+        <li>
+          <a href="/nosotros" class="nav-link" data-page="/nosotros">
+            <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+            Nosotros
+          </a>
+        </li>
+        <li>
+          <a href="/servicios" class="nav-link" data-page="/servicios">
+            <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            Servicios
+          </a>
+        </li>
+        <li>
+          <a href="/cobertura" class="nav-link" data-page="/cobertura">
+            <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            Cobertura
+          </a>
+        </li>
+        <li>
+          <a href="/contacto" class="nav-link" data-page="/contacto">
+            <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            Contacto
+          </a>
+        </li>
+      </ul>
+
+      <!-- ── Desktop CTA ── -->
+      <div class="hidden lg:flex items-center gap-3">
+        <!-- Teléfono -->
+        <a href="https://wa.me/5491124599330" target="_blank" rel="noopener noreferrer" class="phone-chip group hidden xl:flex items-center gap-2 px-3.5 py-2 rounded-lg border border-gray-200 hover:border-rust/40 transition-all duration-300 bg-white/60 hover:bg-rust/5">
+          <div class="relative shrink-0">
+            <svg class="w-4 h-4 text-rust transition-transform duration-300 group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            <span class="absolute -top-0.5 -right-0.5 w-1.5 h-1.5 bg-green-500 rounded-full phone-pulse"></span>
+          </div>
+          <div class="flex flex-col leading-none">
+            <span class="text-[9px] text-gray-400 font-semibold tracking-widest uppercase">Disponible</span>
+            <span class="text-xs font-bold text-gray-800">+54 9 11 2459-9330</span>
+          </div>
+        </a>
+        <!-- Botón CTA -->
+        <a href="/contacto" class="cta-button group">
+          <span class="cta-bg"></span>
+          <span class="cta-shimmer"></span>
+          <span class="relative z-10 flex items-center gap-2">
+            <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+            Solicitar Servicio
+          </span>
+        </a>
+      </div>
+
+      <!-- ── Hamburger Mobile ── -->
+      <button
+        id="mobile-menu-button"
+        class="hamburger lg:hidden relative z-50 w-11 h-11 flex items-center justify-center rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#223546]/30"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+      >
+        <div class="hamburger-lines">
+          <span class="hline hline-1"></span>
+          <span class="hline hline-2"></span>
+          <span class="hline hline-3"></span>
+        </div>
+      </button>
+
+    </div>
+  </nav>
+</header>
+
+<!-- ══════════════════════════════════════════════
+     PANEL MOBILE — drawer lateral premium
+══════════════════════════════════════════════ -->
+<aside id="mobile-panel" class="fixed top-0 right-0 z-50 w-[300px] max-w-[88vw] flex flex-col lg:hidden" aria-hidden="true">
+
+  <!-- ── Cabecera del drawer ── -->
+  <div class="drawer-header">
+    <div class="drawer-brand">
+      <img src="/logo/logo2.svg" alt="S3A Industrial" class="drawer-logo" />
+      <div class="drawer-brand-text">
+        <span class="drawer-brand-name">S3A Industrial</span>
+        <span class="drawer-brand-sub">Sopladores &amp; Servicios</span>
+      </div>
+    </div>
+    <button id="panel-close" class="drawer-close" aria-label="Cerrar menú">
+      <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- ── Línea dorada decorativa ── -->
+  <div class="drawer-gold-line"></div>
+
+  <!-- ── Navegación ── -->
+  <nav class="drawer-nav">
+
+    <a href="/" class="mobile-nav-item" data-page="/">
+      <span class="mobile-nav-icon-wrap">
+        <svg width="17" height="17" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+      </span>
+      <span class="mobile-nav-label">Inicio</span>
+      <svg class="mobile-nav-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+    </a>
+
+    <a href="/nosotros" class="mobile-nav-item" data-page="/nosotros">
+      <span class="mobile-nav-icon-wrap">
+        <svg width="17" height="17" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+      </span>
+      <span class="mobile-nav-label">Nosotros</span>
+      <svg class="mobile-nav-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+    </a>
+
+    <a href="/servicios" class="mobile-nav-item" data-page="/servicios">
+      <span class="mobile-nav-icon-wrap">
+        <svg width="17" height="17" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+      </span>
+      <span class="mobile-nav-label">Servicios</span>
+      <svg class="mobile-nav-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+    </a>
+
+    <a href="/cobertura" class="mobile-nav-item" data-page="/cobertura">
+      <span class="mobile-nav-icon-wrap">
+        <svg width="17" height="17" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+      </span>
+      <span class="mobile-nav-label">Cobertura</span>
+      <svg class="mobile-nav-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+    </a>
+
+    <a href="/contacto" class="mobile-nav-item" data-page="/contacto">
+      <span class="mobile-nav-icon-wrap">
+        <svg width="17" height="17" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+      </span>
+      <span class="mobile-nav-label">Contacto</span>
+      <svg class="mobile-nav-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+    </a>
+
+  </nav>
+
+</aside>
+
+<!-- ══════════════════════════════════════════════ CSS ══════════════════════════════════════════════ -->
+<style>
+  /* ── Variables rápidas ── */
+  :root {
+    --rust-hex: #9B4A2A;
+    --rust-dark: #7a3a20;
+    --panel-bg-from: #1a1614;
+    --panel-bg-to: #261e1b;
+  }
+
+  /* ── Barra superior ── */
+  .header-top-bar {
+    background: linear-gradient(90deg, var(--color-rust) 0%, var(--color-primary) 50%, var(--color-rust) 100%);
+    background-size: 200% 100%;
+    animation: topBarFlow 4s ease infinite;
+    opacity: 0.9;
+  }
+  @keyframes topBarFlow {
+    0%,100% { background-position: 0% 50%; }
+    50%      { background-position: 100% 50%; }
+  }
+
+  /* ── Header base ── */
+  #header {
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(14px) saturate(180%);
+    -webkit-backdrop-filter: blur(14px) saturate(180%);
+    border-bottom: 1px solid rgba(0,0,0,0.04);
+    box-shadow: 0 1px 18px rgba(0,0,0,0.04);
+  }
+  #header.scrolled {
+    background: rgba(255,255,255,0.98);
+    backdrop-filter: blur(20px) saturate(220%);
+    -webkit-backdrop-filter: blur(20px) saturate(220%);
+    box-shadow: 0 4px 28px rgba(0,0,0,0.10), 0 1px 0 rgba(0,0,0,0.04);
+    border-bottom-color: rgba(0,0,0,0.07);
+  }
+
+  /* ── Logo ── */
+  .logo-name {
+    background: linear-gradient(135deg, #1a1a1a 0%, #3d2e28 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease;
+  }
+  .logo-link:hover .logo-name {
+    background: linear-gradient(135deg, var(--color-rust) 0%, var(--color-primary) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .logo-sub { color: var(--color-rust); transition: opacity 0.3s ease; }
+
+  /* ── Desktop Nav links ── */
+  .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #4a4a4a;
+    border-radius: 10px;
+    position: relative;
+    transition: color 0.25s ease, background 0.25s ease, transform 0.2s ease;
+    letter-spacing: -0.01em;
+  }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 14px;
+    right: 14px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-rust), var(--color-primary));
+    border-radius: 2px;
+    transform: scaleX(0);
+    transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1);
+    transform-origin: center;
+  }
+  .nav-link:hover { color: var(--color-rust); background: rgba(155,74,42,0.06); }
+  .nav-link:hover::after { transform: scaleX(1); }
+  .nav-link:active { transform: scale(0.96); }
+  .nav-link.active { color: var(--color-rust); font-weight: 700; }
+  .nav-link.active::after { transform: scaleX(1); }
+
+  .nav-icon {
+    width: 15px;
+    height: 15px;
+    opacity: 0.5;
+    flex-shrink: 0;
+    transition: opacity 0.25s ease;
+  }
+  .nav-link:hover .nav-icon, .nav-link.active .nav-icon { opacity: 1; }
+
+  /* ── Phone chip ── */
+  .phone-chip { transition: all 0.3s ease; }
+
+  /* ── CTA Button ── */
+  .cta-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: #fff;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 14px rgba(155,74,42,0.35), 0 1px 4px rgba(155,74,42,0.2), inset 0 1px 0 rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.1);
+    white-space: nowrap;
+  }
+  .cta-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #7a3a20 0%, var(--color-rust) 50%, #9B6A3A 100%);
+    background-size: 200% 200%;
+    transition: background-position 0.5s ease;
+  }
+  .cta-shimmer {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.18) 50%, transparent 60%);
+    background-size: 200% 100%;
+    background-position: 200% 0;
+    transition: background-position 0.6s ease;
+  }
+  .cta-button:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 8px 24px rgba(155,74,42,0.45), 0 2px 8px rgba(155,74,42,0.25), inset 0 1px 0 rgba(255,255,255,0.2); }
+  .cta-button:hover .cta-bg { background-position: 100% 100%; }
+  .cta-button:hover .cta-shimmer { background-position: -200% 0; }
+  .cta-button:active { transform: translateY(0) scale(0.98); }
+
+  /* ── Hamburger ── */
+  .hamburger {
+    background: #223546;
+    border: 1px solid #2e4a61;
+    box-shadow: 0 2px 8px rgba(34,53,70,0.25);
+  }
+  .hamburger:hover {
+    background: #2c4760;
+    border-color: #3a5f7d;
+    box-shadow: 0 4px 14px rgba(34,53,70,0.35);
+    transform: scale(1.05);
+  }
+  .hamburger.is-open {
+    background: #1a2b38;
+    border-color: #223546;
+    box-shadow: 0 2px 10px rgba(34,53,70,0.4);
+  }
+  .hamburger-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 20px;
+  }
+  .hline {
+    display: block;
+    height: 2px;
+    border-radius: 2px;
+    background: #ffffff;
+    transition: all 0.35s cubic-bezier(0.68,-0.55,0.265,1.55);
+    transform-origin: center;
+  }
+  .hamburger.is-open .hline { background: #fff; }
+  .hamburger.is-open .hline-1 { transform: translateY(7px) rotate(45deg); }
+  .hamburger.is-open .hline-2 { transform: scaleX(0); opacity: 0; }
+  .hamburger.is-open .hline-3 { transform: translateY(-7px) rotate(-45deg); }
+
+  /* ── Mobile Overlay ── */
+  #mobile-overlay.is-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* ══════════════════════════════════
+     DRAWER PANEL
+  ══════════════════════════════════ */
+  #mobile-panel {
+    background: linear-gradient(170deg, #1a2d3a 0%, #1e313f 55%, #162530 100%);
+    box-shadow: -8px 0 48px rgba(0,0,0,0.45), -2px 0 12px rgba(0,0,0,0.2);
+    transform: translateX(100%);
+    transition: transform 0.38s cubic-bezier(0.32,0.72,0,1);
+    pointer-events: none;
+    /* subtle grid texture */
+    background-image:
+      linear-gradient(170deg, #1a2d3a 0%, #1e313f 55%, #162530 100%),
+      repeating-linear-gradient(90deg, transparent 0px, transparent 39px, rgba(255,255,255,.025) 39px, rgba(255,255,255,.025) 40px),
+      repeating-linear-gradient(0deg,  transparent 0px, transparent 39px, rgba(255,255,255,.025) 39px, rgba(255,255,255,.025) 40px);
+    background-blend-mode: normal, overlay, overlay;
+  }
+  #mobile-panel.is-open {
+    transform: translateX(0);
+    pointer-events: auto;
+  }
+
+  /* ── Drawer header ── */
+  .drawer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px 16px;
+    flex-shrink: 0;
+  }
+  .drawer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .drawer-logo {
+    width: 74px;
+    height: 74px;
+    object-fit: contain;
+    filter:
+      drop-shadow(0 0 8px rgba(255,255,255,0.55))
+      drop-shadow(0 0 16px rgba(255,255,255,0.25))
+      drop-shadow(0 2px 8px rgba(0,0,0,.4));
+    background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, transparent 70%);
+    border-radius: 50%;
+    padding: 4px;
+  }
+  .drawer-brand-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .drawer-brand-name {
+    font-family: var(--font-display, serif);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  .drawer-brand-sub {
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #aa7e56;
+    line-height: 1;
+  }
+  .drawer-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.10);
+    color: rgba(255,255,255,0.55);
+    cursor: pointer;
+    transition: background .2s ease, color .2s ease, transform .2s ease;
+    flex-shrink: 0;
+  }
+  .drawer-close:hover {
+    background: rgba(255,255,255,0.13);
+    color: #fff;
+    transform: rotate(90deg);
+  }
+
+  /* ── Gold line ── */
+  .drawer-gold-line {
+    height: 2px;
+    margin: 0 20px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, transparent, #aa7e56 30%, #cca373 60%, transparent);
+    flex-shrink: 0;
+    opacity: 0.7;
+  }
+
+  /* ── Nav ── */
+  .drawer-nav {
+    padding: 10px 12px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .drawer-nav::-webkit-scrollbar { width: 0; }
+
+  .mobile-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 13px 12px;
+    border-radius: 12px;
+    color: rgba(255,255,255,0.62);
+    text-decoration: none;
+    position: relative;
+    transition: background .2s ease, color .2s ease, padding-left .2s ease;
+    border-left: 3px solid transparent;
+  }
+  .mobile-nav-item:hover {
+    background: rgba(255,255,255,0.06);
+    color: rgba(255,255,255,0.92);
+    border-left-color: rgba(170,126,86,0.5);
+    padding-left: 15px;
+  }
+  .mobile-nav-item.active {
+    background: rgba(170,126,86,0.12);
+    color: #cca373;
+    border-left-color: #aa7e56;
+    font-weight: 700;
+  }
+  .mobile-nav-item.active .mobile-nav-icon-wrap {
+    background: rgba(170,126,86,0.18);
+    color: #cca373;
+  }
+  .mobile-nav-item:active { transform: scale(0.98); }
+
+  .mobile-nav-icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.07);
+    color: rgba(255,255,255,0.55);
+    flex-shrink: 0;
+    transition: background .2s ease, color .2s ease;
+  }
+  .mobile-nav-item:hover .mobile-nav-icon-wrap {
+    background: rgba(255,255,255,0.11);
+    color: rgba(255,255,255,0.85);
+  }
+
+  .mobile-nav-label {
+    flex: 1;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  .mobile-nav-chevron {
+    width: 14px;
+    height: 14px;
+    opacity: 0.25;
+    flex-shrink: 0;
+    transition: opacity .2s ease, transform .2s ease;
+  }
+  .mobile-nav-item:hover .mobile-nav-chevron {
+    opacity: 0.55;
+    transform: translateX(2px);
+  }
+  .mobile-nav-item.active .mobile-nav-chevron { opacity: 0.5; }
+
+
+
+  /* ── Pulse animations ── */
+  .phone-pulse {
+    animation: phonePulse 2s ease-in-out infinite;
+  }
+  @keyframes phonePulse {
+    0%,100% { opacity: 1; transform: scale(1); }
+    70%      { opacity: 0.4; transform: scale(1.5); }
+  }
+
+  /* ── Scroll padding ── */
+  html { scroll-padding-top: 96px; }
+
+  /* ── Stagger nav items on open ── */
+  #mobile-panel .mobile-nav-item {
+    opacity: 0;
+    transform: translateX(18px);
+    transition: opacity .25s ease, transform .25s ease, background .2s ease, color .2s ease, padding-left .2s ease, border-left-color .2s ease;
+  }
+  #mobile-panel.is-open .mobile-nav-item:nth-child(1) { animation: slideIn .28s ease 0.08s both; }
+  #mobile-panel.is-open .mobile-nav-item:nth-child(2) { animation: slideIn .28s ease 0.13s both; }
+  #mobile-panel.is-open .mobile-nav-item:nth-child(3) { animation: slideIn .28s ease 0.18s both; }
+  #mobile-panel.is-open .mobile-nav-item:nth-child(4) { animation: slideIn .28s ease 0.23s both; }
+  #mobile-panel.is-open .mobile-nav-item:nth-child(5) { animation: slideIn .28s ease 0.28s both; }
+
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateX(16px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+
+  /* ── Reducir movimiento ── */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* ── Performance ── */
+  .nav-link, .cta-button, .mobile-nav-item, .logo-link, #mobile-panel {
+    will-change: transform;
+  }
+</style>
+
+<!-- ══════════════════════════════════════════════ JS ══════════════════════════════════════════════ -->
+<script>
+  const hamburger  = document.getElementById('mobile-menu-button')!;
+  const panel      = document.getElementById('mobile-panel')!;
+  const overlay    = document.getElementById('mobile-overlay')!;
+  const header     = document.getElementById('header')!;
+
+  // ── Abrir / cerrar panel ──
+  function openPanel() {
+    panel.classList.add('is-open');
+    overlay.classList.add('is-open');
+    hamburger.classList.add('is-open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    panel.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closePanel() {
+    panel.classList.remove('is-open');
+    overlay.classList.remove('is-open');
+    hamburger.classList.remove('is-open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    panel.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  hamburger.addEventListener('click', () => {
+    panel.classList.contains('is-open') ? closePanel() : openPanel();
+  });
+
+  overlay.addEventListener('click', closePanel);
+
+  // Botón de cierre interno del drawer
+  document.getElementById('panel-close')?.addEventListener('click', closePanel);
+
+  // Cerrar con Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closePanel();
+  });
+
+  // Cerrar al navegar
+  panel.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closePanel);
+  });
+
+  // Cerrar al hacer resize a desktop
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 1024) closePanel();
+  }, { passive: true });
+
+  // ── Header scroll ──
+  let ticking = false;
+  const updateHeader = () => {
+    if (window.pageYOffset > 30) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+    ticking = false;
+  };
+  window.addEventListener('scroll', () => {
+    if (!ticking) { requestAnimationFrame(updateHeader); ticking = true; }
+  }, { passive: true });
+
+  // ── Link activo según página ──
+  const currentPath = window.location.pathname;
+
+  // Desktop
+  document.querySelectorAll<HTMLAnchorElement>('.nav-link').forEach(link => {
+    const href = link.getAttribute('href') ?? '';
+    const isActive = href === currentPath || (href !== '/' && currentPath.startsWith(href));
+    if (isActive) link.classList.add('active');
+  });
+
+  // Mobile panel
+  document.querySelectorAll<HTMLAnchorElement>('.mobile-nav-item').forEach(link => {
+    const href = link.getAttribute('href') ?? '';
+    const isActive = href === currentPath || (href !== '/' && currentPath.startsWith(href));
+    if (isActive) link.classList.add('active');
+  });
+</script>

@@ -1,0 +1,768 @@
+---
+// Hero Section - Diseño moderno simplificado
+---
+
+<section id="inicio" class="hero-section">
+  <!-- Background -->
+  <div class="hero-background">
+    <img src="/imagenes/imagen1.jpg" alt="" class="hero-image" />
+    <div class="hero-overlay"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="hero-content">
+    <div class="container">
+      <div class="content-grid">
+        
+        <!-- Text Content -->
+        <div class="text-content">
+          <h1 class="hero-title">
+            <span class="title-line">Expertos en</span>
+            <span class="title-main">Sopladores Industriales</span>
+            <span class="title-brand">S3A Industrial</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Servicio técnico especializado en <strong>reparación y mantenimiento</strong> de equipos industriales. 
+            <strong>Garantizamos la continuidad operativa</strong> de su negocio.
+          </p>
+
+          <!-- Features -->
+          <ul class="features-list">
+            <li class="feature">
+              <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <span>Atención inmediata y servicio en sitio</span>
+            </li>
+            <li class="feature">
+              <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <span>Técnicos certificados y especializados</span>
+            </li>
+            <li class="feature">
+              <svg class="check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <span>Disponibilidad 24/7 para emergencias</span>
+            </li>
+          </ul>
+
+          <!-- CTA Buttons -->
+          <div class="cta-buttons">
+            <a href="/contacto" class="btn-primary">
+              Solicitar Servicio
+              <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
+            </a>
+            <a href="/servicios" class="btn-secondary">
+              Nuestros Servicios
+            </a>
+          </div>
+        </div>
+
+        <!-- Stats Card -->
+        <div class="stats-card">
+          <div class="stats-grid">
+            <div class="stat">
+              <div class="stat-number">+15</div>
+              <div class="stat-label">Años de Experiencia</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">500+</div>
+              <div class="stat-label">Clientes Satisfechos</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">24/7</div>
+              <div class="stat-label">Servicio de Emergencia</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">98%</div>
+              <div class="stat-label">Índice de Satisfacción</div>
+            </div>
+          </div>
+
+          <!-- Contact Quick -->
+          <div class="contact-card">
+            <div class="contact-header">
+              <svg class="phone-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+              </svg>
+              <div>
+                <p class="contact-label">¿Necesita ayuda inmediata?</p>
+                <p class="contact-phone">+1 (234) 567-890</p>
+              </div>
+            </div>
+            <a href="tel:+1234567890" class="btn-call">Llamar Ahora</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  
+</section>
+
+<style>
+  /* Hero Moderno - Diseño Empresarial y Profesional */
+  .hero-modern {
+    position: relative;
+    background: linear-gradient(135deg, #0d1821 0%, #1e313f 100%);
+    padding-top: 140px;
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: 1024px) {
+    .hero-modern {
+      padding-top: 160px;
+    }
+  }
+
+  /* Background Image con efecto parallax */
+  .hero-background {
+    z-index: 0;
+  }
+
+  .background-image {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: slowZoom 20s ease-in-out infinite alternate;
+  }
+
+  @keyframes slowZoom {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.05);
+    }
+  }
+
+  /* Overlay gradiente elegante */
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(13, 24, 33, 0.75) 0%,
+      rgba(30, 49, 63, 0.70) 50%,
+      rgba(100, 66, 57, 0.65) 100%
+    );
+    backdrop-filter: blur(1px);
+  }
+
+  /* Pattern overlay sutil */
+  .hero-pattern {
+    position: absolute;
+    inset: 0;
+    background-image: 
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 50px,
+        rgba(255, 255, 255, 0.02) 50px,
+        rgba(255, 255, 255, 0.02) 51px
+      );
+    opacity: 0.3;
+  }
+
+  /* Decorative Elements */
+  .hero-decorations {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .deco-circle {
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid rgba(170, 126, 86, 0.2);
+    animation: float 15s ease-in-out infinite;
+  }
+
+  .deco-1 {
+    width: 400px;
+    height: 400px;
+    top: -100px;
+    right: -100px;
+    animation-delay: 0s;
+  }
+
+  .deco-2 {
+    width: 300px;
+    height: 300px;
+    bottom: -50px;
+    left: -80px;
+    animation-delay: 2s;
+  }
+
+  .deco-line {
+    position: absolute;
+    width: 200px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(170, 126, 86, 0.4), transparent);
+    top: 30%;
+    right: 10%;
+    animation: pulse 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    33% {
+      transform: translate(30px, -30px) rotate(120deg);
+    }
+    66% {
+      transform: translate(-20px, 20px) rotate(240deg);
+    }
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 0.3;
+    }
+    50% {
+      opacity: 0.6;
+    }
+  }
+
+  /* Content Wrapper */
+  .hero-content-wrapper {
+    min-height: calc(100vh - 160px);
+    display: flex;
+    align-items: center;
+    padding: 4rem 0;
+  }
+
+  /* Badge */
+  .hero-badge {
+    animation: slideInDown 0.8s ease-out;
+  }
+
+  @keyframes slideInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Title Styling */
+  .hero-title-modern {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    animation: slideInLeft 1s ease-out 0.2s both;
+  }
+
+  .title-line-1 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.92);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .title-line-2 {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 8vw, 6.5rem);
+    font-weight: 400;
+    background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 50%, #aa7e56 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 0.95;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  .title-accent {
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 800;
+    color: #cca373;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-shadow: 0 2px 10px rgba(170, 126, 86, 0.3);
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Subtitle */
+  .hero-subtitle-modern {
+    animation: slideInLeft 1s ease-out 0.4s both;
+  }
+
+  .hero-subtitle-modern strong {
+    color: #aa7e56;
+    font-weight: 700;
+  }
+
+  /* Features List */
+  .hero-features {
+    animation: slideInLeft 1s ease-out 0.6s both;
+  }
+
+  .feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: rgba(255, 255, 255, 0.95);
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    font-weight: 500;
+    letter-spacing: 0.015em;
+  }
+
+  .feature-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #aa7e56;
+    flex-shrink: 0;
+  }
+
+  /* CTA Buttons */
+  .hero-cta-group {
+    animation: slideInUp 1s ease-out 0.8s both;
+  }
+
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .cta-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.15rem 2.75rem;
+    background: linear-gradient(135deg, #aa7e56 0%, #8f6f51 100%);
+    color: white;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.125rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-radius: 12px;
+    box-shadow: 
+      0 10px 30px rgba(170, 126, 86, 0.4),
+      0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-primary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .cta-primary:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 
+      0 15px 40px rgba(170, 126, 86, 0.5),
+      0 6px 15px rgba(0, 0, 0, 0.4);
+  }
+
+  .cta-primary:hover::before {
+    opacity: 1;
+  }
+
+  .cta-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    transition: transform 0.4s ease;
+  }
+
+  .cta-primary:hover .cta-icon {
+    transform: translateX(5px);
+  }
+
+  .cta-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-weight: 600;
+    font-size: 1.125rem;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+  }
+
+  .cta-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(170, 126, 86, 0.6);
+    transform: translateY(-2px);
+  }
+
+  .cta-icon-secondary {
+    width: 1.25rem;
+    height: 1.25rem;
+    transition: transform 0.4s ease;
+  }
+
+  .cta-secondary:hover .cta-icon-secondary {
+    transform: translateX(5px);
+  }
+
+  /* Stats Card */
+  .hero-stats-card {
+    animation: slideInRight 1s ease-out 0.6s both;
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .stats-card-inner {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 24px;
+    padding: 2.5rem;
+    box-shadow: 
+      0 20px 60px rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .stat-item {
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #ffffff 0%, #aa7e56 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  /* Contact Quick Card */
+  .contact-quick-card {
+    background: linear-gradient(135deg, rgba(170, 126, 86, 0.2), rgba(170, 126, 86, 0.1));
+    border: 1px solid rgba(170, 126, 86, 0.3);
+    border-radius: 16px;
+    padding: 1.5rem;
+  }
+
+  .contact-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #aa7e56, #8f6f51);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(170, 126, 86, 0.4);
+  }
+
+  .contact-btn-quick {
+    display: block;
+    width: 100%;
+    padding: 0.875rem;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .contact-btn-quick:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+  }
+
+  /* Scroll Indicator Modern */
+  .scroll-indicator-modern {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    z-index: 10;
+    animation: fadeInUp 1s ease-out 1.5s both;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateX(-50%) translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+
+  .scroll-indicator-modern:hover {
+    color: white;
+  }
+
+  .scroll-mouse {
+    width: 28px;
+    height: 45px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    padding-top: 8px;
+  }
+
+  .scroll-wheel {
+    width: 3px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 2px;
+    animation: scrollWheel 2s ease-in-out infinite;
+  }
+
+  @keyframes scrollWheel {
+    0%, 100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(10px);
+      opacity: 0.3;
+    }
+  }
+
+  .scroll-text {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  /* Floating Badge */
+  .floating-badge {
+    position: absolute;
+    top: 10rem;
+    right: 2rem;
+    z-index: 10;
+    animation: floatBadge 3s ease-in-out infinite;
+  }
+
+  @media (min-width: 1024px) {
+    .floating-badge {
+      top: 12rem;
+    }
+  }
+
+  @keyframes floatBadge {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .badge-content {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.875rem 1.25rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .hero-modern {
+      padding-top: 90px;
+    }
+
+    .hero-content-wrapper {
+      min-height: auto;
+      padding: 3rem 0;
+    }
+
+    .title-line-2 {
+      font-size: clamp(2rem, 8vw, 3.5rem);
+    }
+
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .floating-badge {
+      display: none;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .hero-modern {
+      padding-top: 80px;
+      padding-bottom: 40px;
+    }
+
+    .cta-primary,
+    .cta-secondary {
+      width: 100%;
+      justify-content: center;
+      padding: 0.875rem 2rem;
+      font-size: 1rem;
+    }
+
+    .feature-item {
+      font-size: 1rem;
+    }
+
+    .feature-icon {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+
+    .scroll-indicator-modern {
+      bottom: 1rem;
+    }
+  }
+
+  /* Accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+</style>
+
+<script>
+  // Smooth scroll para el indicador
+  document.querySelector('.scroll-indicator-modern')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    const targetId = (e.currentTarget as HTMLAnchorElement).getAttribute('href');
+    if (targetId) {
+      const targetElement = document.querySelector(targetId);
+      targetElement?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+
+  // Parallax effect en scroll
+  window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const background = document.querySelector('.background-image') as HTMLElement;
+    
+    if (background && scrolled <= window.innerHeight) {
+      background.style.transform = `translateY(${scrolled * 0.5}px)`;
+    }
+  }, { passive: true });
+
+  // Animación de números en las estadísticas
+  const animateValue = (element: HTMLElement, start: number, end: number, duration: number, suffix: string = '') => {
+    let startTimestamp: number | null = null;
+    const step = (timestamp: number) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      const value = Math.floor(progress * (end - start) + start);
+      element.textContent = value + suffix;
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    window.requestAnimationFrame(step);
+  };
+
+  // Intersection Observer para animar stats cuando sean visibles
+  const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const statNumbers = entry.target.querySelectorAll('.stat-number');
+        statNumbers.forEach((stat) => {
+          const text = stat.textContent || '';
+          if (text.includes('+')) {
+            animateValue(stat as HTMLElement, 0, parseInt(text), 2000, '+');
+          } else if (text.includes('%')) {
+            animateValue(stat as HTMLElement, 0, parseInt(text), 2000, '%');
+          } else if (text.includes('/')) {
+            stat.textContent = '24/7'; // Texto fijo para 24/7
+          } else {
+            animateValue(stat as HTMLElement, 0, parseInt(text), 2000, '+');
+          }
+        });
+        statsObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  const statsCard = document.querySelector('.hero-stats-card');
+  if (statsCard) {
+    statsObserver.observe(statsCard);
+  }
+</script>

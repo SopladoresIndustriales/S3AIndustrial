@@ -1,1 +1,301 @@
 @import "tailwindcss";
+
+/* ============================================
+   CSS CUSTOM PROPERTIES - Colores S3A Industrial
+   ============================================ */
+:root {
+  /* Colores Primarios inspirados en el logo */
+  --color-primary: #1e313f;        /* Azul mar profundo */
+  --color-secondary: #223546;      /* Azul océano */
+  
+  /* Colores Secundarios */
+  --color-steel: #334c60;          /* Azul acero */
+  --color-rust: #7b5433;           /* Marrón tierra */
+  
+  /* Colores Dorados - Nuevos acentos */
+  --color-golden: #aa7e56;         /* Dorado-marrón suave */
+  --color-golden-light: #cca373;   /* Dorado claro */
+  --color-golden-dark: #8b6644;    /* Dorado oscuro */
+  
+  /* Compatibilidad (aliases) */
+  --color-gray-medium: #aa7e56;    /* Dorado-marrón suave */
+  --color-gray-light: #cca373;     /* Dorado claro */
+  
+  /* Fondos */
+  --color-bg-cream: #f4f1ec;       /* Crema dorado muy suave */
+  --color-bg-sand: #ebe5dc;        /* Arena dorada */
+  
+  /* Whites/Blacks */
+  --color-white: #ffffff;
+  --color-black: #1a1a1a;
+  
+  /* Tipografía Industrial */
+  --font-display: 'Bebas Neue', 'Impact', sans-serif;           /* Títulos principales - Ultra Bold */
+  --font-heading: 'Barlow Condensed', 'Arial Narrow', sans-serif; /* Subtítulos - Condensed Bold */
+  --font-body: 'Roboto', 'Arial', sans-serif;                    /* Cuerpo - Limpio y legible */
+  --font-accent: 'Barlow', 'Helvetica', sans-serif;              /* Acentos y botones */
+}
+
+/* ============================================
+   RESET & BASE STYLES
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  line-height: 1.65;
+  color: var(--color-secondary);
+  background-color: var(--color-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  font-weight: 400;
+  overflow-x: hidden;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+/* ============================================
+   TYPOGRAPHY - Industrial & Robust
+   ============================================ */
+h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: 0.015em;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
+h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+  color: var(--color-primary);
+}
+
+strong, b {
+  font-weight: 700;
+}
+
+p {
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+/* ============================================
+   UTILITIES - Efectos Globales
+   ============================================ */
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-steel));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, var(--color-golden-dark), var(--color-golden), var(--color-golden-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Divider industrial */
+.divider-industrial {
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--color-golden), transparent);
+  margin: 3rem auto;
+  max-width: 100px;
+  position: relative;
+}
+
+.divider-industrial::before,
+.divider-industrial::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--color-golden);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.divider-industrial::before {
+  left: -20px;
+}
+
+.divider-industrial::after {
+  right: -20px;
+}
+
+/* Industrial badge */
+.badge-industrial {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  background: linear-gradient(135deg, rgba(30, 49, 63, 0.05), rgba(51, 76, 96, 0.08));
+  border: 2px solid var(--color-golden-light);
+  border-radius: 50px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  backdrop-filter: blur(10px);
+}
+
+/* Botones industriales mejorados */
+.btn-industrial {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-industrial-primary {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-steel));
+  color: var(--color-white);
+  box-shadow: 0 10px 30px rgba(30, 49, 63, 0.3);
+}
+
+.btn-industrial-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(30, 49, 63, 0.4);
+}
+
+.btn-industrial-secondary {
+  background: linear-gradient(135deg, var(--color-golden-dark), var(--color-golden));
+  color: var(--color-white);
+  box-shadow: 0 10px 30px rgba(170, 126, 86, 0.3);
+}
+
+.btn-industrial-secondary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(170, 126, 86, 0.4);
+}
+
+/* Scroll offset para navegación sticky */
+section {
+  scroll-margin-top: 5rem;
+  position: relative;
+}
+
+/* Espaciado específico para footer */
+footer {
+  margin-top: 0 !important;
+}
+
+section + footer {
+  margin-top: 0 !important;
+}
+
+/* Espaciado específico para contacto */
+#contacto {
+  margin-bottom: 0 !important;
+}
+
+/* Centrado mejorado para contenido */
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Smooth transitions globales */
+a, button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================
+   CUSTOM SCROLLBAR - Industrial style
+   ============================================ */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f4f1ec;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #aa7e56, #7b5433);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #7b5433, #1e313f);
+}
+
+/* ============================================
+   SECTION SEPARATOR
+   ============================================ */
+.section-sep {
+  height: 4px;
+  background: linear-gradient(90deg, transparent 0%, #aa7e56 30%, #cca373 50%, #aa7e56 70%, transparent 100%);
+  border: none;
+  margin: 0;
+}
+
+/* ============================================
+   LOADING STATES
+   ============================================ */
+.loading {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* ============================================
+   FOCUS STATES - Accesibilidad
+   ============================================ */
+*:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
