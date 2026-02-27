@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://s3aindustrial.com', // Reemplazar por el dominio real cuando esté listo
+  site: 'https://s3a-industrial.vercel.app', // TODO: cambiar a https://s3aindustrial.com cuando el dominio esté apuntando a Vercel
   integrations: [
     sitemap({
       changefreq: 'weekly',
