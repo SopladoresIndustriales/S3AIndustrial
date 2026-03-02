@@ -1,5 +1,5 @@
 # robots.txt — S3A Industrial
-# https://s3aindustrial.com
+# https://www.s3aindustrial.com
 
 User-agent: *
 Allow: /
@@ -9,4 +9,4 @@ Disallow: /404
 Disallow: /_astro/
 
 # Sitemap generado automáticamente por @astrojs/sitemap
-Sitemap: https://s3aindustrial.com/sitemap-index.xml
+Sitemap: https://www.s3aindustrial.com/sitemap-index.xml
