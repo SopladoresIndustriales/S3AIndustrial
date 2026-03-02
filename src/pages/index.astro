@@ -7,12 +7,29 @@ import Industries from '../components/IndustriesNew.astro';
 import Process from '../components/ProcessNew.astro';
 import CTAFinal from '../components/CTAFinalNew.astro';
 import Footer from '../components/Footer.astro';
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.s3aindustrial.com/",
+  "url": "https://www.s3aindustrial.com/",
+  "name": "S3A Industrial | Reparación y Mantenimiento de Sopladores Industriales en Argentina",
+  "description": "S3A Industrial — especialistas en reparación y mantenimiento de sopladores industriales. Servicio técnico en planta, mantenimiento preventivo y correctivo en Argentina.",
+  "publisher": {
+    "@id": "https://www.s3aindustrial.com/#organization"
+  },
+  "inLanguage": "es-AR",
+  "isPartOf": {
+    "@id": "https://www.s3aindustrial.com/#website"
+  }
+};
 ---
 
 <Layout
   title="S3A Industrial | Reparación y Mantenimiento de Sopladores Industriales en Argentina"
   description="S3A Industrial — especialistas en reparación y mantenimiento de sopladores industriales. Servicio técnico en planta, mantenimiento preventivo y correctivo. Respuesta rápida y diagnóstico eficiente. ¡Solicitá tu cotización!"
-  canonicalURL="https://s3a-industrial.vercel.app/"
+  canonicalURL="https://www.s3aindustrial.com/"
+  pageSchema={pageSchema}
 >
   <!-- Header fijo -->
   <Header />

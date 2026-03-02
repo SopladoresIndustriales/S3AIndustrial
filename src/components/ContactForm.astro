@@ -35,19 +35,24 @@
 
           <!-- ── TABS ── -->
           <div class="cf-tabs" role="tablist">
-            <button type="button" class="cf-tab cf-tab--active" data-tab="email" id="tabEmail" role="tab" aria-selected="true" aria-controls="panelEmail">
-              <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-              Correo Electrónico
-            </button>
-            <button type="button" class="cf-tab" data-tab="wa" id="tabWA" role="tab" aria-selected="false" aria-controls="panelWA">
+            <button type="button" class="cf-tab cf-tab--active" data-tab="wa" id="tabWA" role="tab" aria-selected="true" aria-controls="panelWA">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.525 5.845L.057 23.986l6.306-1.452A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.013-1.374l-.36-.213-3.737.859.882-3.626-.234-.372A9.818 9.818 0 1112 21.818z"/></svg>
               WhatsApp
+            </button>
+            <button type="button" class="cf-tab" data-tab="email" id="tabEmail" role="tab" aria-selected="false" aria-controls="panelEmail">
+              <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              Correo Electrónico
             </button>
           </div>
 
           <!-- ── PANEL EMAIL ── -->
-          <div id="panelEmail" class="cf-panel cf-panel--active" role="tabpanel" aria-labelledby="tabEmail">
+          <div id="panelEmail" class="cf-panel" role="tabpanel" aria-labelledby="tabEmail">
         <form id="contact-form" class="space-y-4 md:space-y-5">
+          <!-- Web3Forms: reemplazá el value por tu Access Key real de web3forms.com -->
+          <input type="hidden" name="access_key" value="1dbb8b30-858c-4a72-8653-76fa2cfa18e8">
+          <input type="hidden" name="subject" value="Nueva consulta desde el sitio web – S3A Industrial">
+          <input type="hidden" name="from_name" value="Sitio Web S3A Industrial">
+          <input type="checkbox" name="botcheck" style="display:none">
           
           <!-- Grid de 2 columnas - Tailwind -->
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
@@ -153,7 +158,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
               </svg>
               <p class="text-green-700 font-medium">
-                ¡Gracias por contactarnos! Nos comunicaremos con usted a la brevedad.
+                ¡Mensaje enviado con éxito! Nos comunicaremos con usted a la brevedad.
               </p>
             </div>
           </div>
@@ -161,7 +166,7 @@
           </div><!-- /panelEmail -->
 
           <!-- ── PANEL WHATSAPP ── -->
-          <div id="panelWA" class="cf-panel" role="tabpanel" aria-labelledby="tabWA">
+          <div id="panelWA" class="cf-panel cf-panel--active" role="tabpanel" aria-labelledby="tabWA">
             <p class="cf-wa-intro">Completá los datos y se abrirá WhatsApp con el mensaje listo para enviar.</p>
             <form id="contactWAForm" class="cf-wa-form" data-wa="5491124599330">
 
@@ -1169,7 +1174,7 @@ Hola, me comunico desde el sitio web para solicitar un presupuesto. Quedo a disp
     });
   }
 
-  // Submit del formulario
+  // Submit del formulario — envía via Web3Forms a info@s3aindustrial.com
   form?.addEventListener('submit', async (e) => {
     e.preventDefault();
     
@@ -1181,36 +1186,51 @@ Hola, me comunico desde el sitio web para solicitar un presupuesto. Quedo a disp
       }
     });
     
-    if (!isValid) {
-      return;
-    }
+    if (!isValid) return;
     
+    // Recopilar datos del formulario
+    const d = new FormData(form);
+    const get = (k: string) => (d.get(k) as string || '').trim();
+    const nombre   = get('nombre');
+    const empresa  = get('empresa');
+    const email    = get('email');
+    const telefono = get('telefono');
+    const servicio = get('servicio');
+    const mensaje  = get('mensaje');
+
     // Mostrar estado de loading
     submitButton.classList.add('loading');
     submitButton.disabled = true;
-    
-    // Simular envío (aquí integrarías con tu backend o servicio de email)
-    setTimeout(() => {
-      // Mostrar mensaje de éxito
-      successMessage?.classList.remove('hidden');
-      form.reset();
-      
-      // Remover clases de success de los campos
-      inputs?.forEach(input => {
-        input.classList.remove('success', 'error');
+
+    try {
+      // Enviar via Web3Forms
+      const formData = new FormData(form);
+      const object: Record<string, string> = {};
+      formData.forEach((value, key) => { object[key] = value.toString(); });
+      // Sobrescribir subject con datos del cliente
+      object['subject'] = `Consulta desde sitio web – ${empresa || nombre}`;
+
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(object)
       });
-      
-      // Remover estado de loading
+      const data = await response.json();
+
+      if (data.success) {
+        successMessage?.classList.remove('hidden');
+        form.reset();
+        inputs?.forEach(input => input.classList.remove('success', 'error'));
+        successMessage?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        setTimeout(() => successMessage?.classList.add('hidden'), 8000);
+      } else {
+        alert('Hubo un error al enviar el mensaje. Por favor intentá nuevamente o contactanos por WhatsApp.');
+      }
+    } catch (err) {
+      alert('Error de conexión. Por favor intentá nuevamente o contactanos por WhatsApp.');
+    } finally {
       submitButton.classList.remove('loading');
       submitButton.disabled = false;
-      
-      // Ocultar mensaje después de 5 segundos
-      setTimeout(() => {
-        successMessage?.classList.add('hidden');
-      }, 5000);
-      
-      // Scroll al mensaje de éxito
-      successMessage?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }, 2000);
+    }
   });
 </script>

@@ -8,6 +8,7 @@ interface Props {
   canonicalURL?: string;
   ogImage?: string;
   noindex?: boolean;
+  pageSchema?: object | object[];
 }
 
 const {
@@ -16,45 +17,128 @@ const {
   canonicalURL = Astro.url.href,
   ogImage = '/og-image.png',
   noindex = false,
+  pageSchema,
 } = Astro.props;
 
 const siteName = 'S3A Industrial';
-const siteURL = (Astro.site?.toString().replace(/\/$/, '')) ?? 'https://s3a-industrial.vercel.app';
+const siteURL = (Astro.site?.toString().replace(/\/$/, '')) ?? 'https://www.s3aindustrial.com';
 
-// JSON-LD: LocalBusiness structured data
-const jsonLD = JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "S3A Industrial",
-  "description": "Empresa especializada en reparación y mantenimiento de sopladores industriales. Servicio técnico en sitio con mantenimiento preventivo y correctivo.",
-  "url": siteURL,
-  "logo": `${siteURL}/logo/logo2.svg`,
-  "image": `${siteURL}/logo/logo1.png`,
-  "telephone": "+54 9 11 2459-9330",
-  "email": "contacto@s3aindustrial.com",
-  "address": {
-    "@type": "PostalAddress",
-    "addressCountry": "AR",
-    "addressRegion": "Buenos Aires"
+// JSON-LD: LocalBusiness + WebSite structured data
+const jsonLD = JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": `${siteURL}/#organization`,
+    "name": "S3A Industrial",
+    "description": "Empresa especializada en reparación y mantenimiento de sopladores industriales en Argentina. Servicio técnico en sitio, mantenimiento preventivo y correctivo, diagnóstico eficiente y respuesta rápida.",
+    "url": siteURL,
+    "logo": {
+      "@type": "ImageObject",
+      "url": `${siteURL}/logo/logo2.svg`,
+      "width": 180,
+      "height": 60
+    },
+    "image": `${siteURL}/logo/logo1.png`,
+    "telephone": "+5491124599330",
+    "email": "info@s3aindustrial.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "AR",
+      "addressRegion": "Buenos Aires",
+      "addressLocality": "Buenos Aires"
+    },
+    "areaServed": [
+      {
+        "@type": "State",
+        "name": "Buenos Aires",
+        "sameAs": "https://www.wikidata.org/wiki/Q44762"
+      },
+      {
+        "@type": "City",
+        "name": "Ciudad Autónoma de Buenos Aires",
+        "sameAs": "https://www.wikidata.org/wiki/Q1486"
+      }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servicios Industriales S3A",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Reparación de Sopladores Industriales",
+            "description": "Diagnóstico y reparación de sopladores de raíz y turbo sopladores industriales en planta del cliente."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Mantenimiento Preventivo Industrial",
+            "description": "Planes de mantenimiento preventivo para prolongar la vida útil y garantizar la continuidad operativa de sopladores industriales."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Mantenimiento Correctivo Industrial",
+            "description": "Intervención correctiva rápida ante fallas para restablecer la operación de equipos industriales."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Diagnóstico Técnico en Sitio",
+            "description": "Evaluación técnica especializada en las instalaciones del cliente sin necesidad de traslado del equipo."
+          }
+        }
+      ]
+    },
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+5491124599330",
+        "contactType": "customer service",
+        "areaServed": "AR",
+        "availableLanguage": "Spanish"
+      },
+      {
+        "@type": "ContactPoint",
+        "email": "info@s3aindustrial.com",
+        "contactType": "customer service",
+        "areaServed": "AR",
+        "availableLanguage": "Spanish"
+      }
+    ],
+    "sameAs": [
+      "https://wa.me/5491124599330"
+    ],
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    "priceRange": "$$",
+    "currenciesAccepted": "ARS",
+    "paymentAccepted": "Cash, Bank Transfer"
   },
-  "areaServed": {
-    "@type": "Country",
-    "name": "Argentina"
-  },
-  "serviceType": [
-    "Reparación de Sopladores Industriales",
-    "Mantenimiento Preventivo Industrial",
-    "Mantenimiento Correctivo Industrial",
-    "Diagnóstico Técnico en Sitio"
-  ],
-  "sameAs": [],
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-    "opens": "08:00",
-    "closes": "18:00"
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${siteURL}/#website`,
+    "url": siteURL,
+    "name": "S3A Industrial",
+    "description": "Especialistas en reparación y mantenimiento de sopladores industriales en Argentina.",
+    "publisher": {
+      "@id": `${siteURL}/#organization`
+    },
+    "inLanguage": "es-AR"
   }
-});
+]);
 ---
 
 <!DOCTYPE html>
@@ -70,9 +154,15 @@ const jsonLD = JSON.stringify({
 
     <!-- ── SEO básico ── -->
     <meta name="author" content="S3A Industrial" />
-    <meta name="keywords" content="sopladores industriales, reparación sopladores, mantenimiento sopladores industriales, servicio técnico industrial, mantenimiento preventivo industrial, mantenimiento correctivo, sopladores de raíz, reparación en sitio, Argentina" />
+    <meta name="keywords" content="sopladores industriales, reparación sopladores, mantenimiento sopladores industriales, servicio técnico industrial, mantenimiento preventivo industrial, mantenimiento correctivo industrial, sopladores de raíz, sopladores roots, reparación en sitio, reparación en planta, diagnóstico técnico industrial, S3A Industrial, Buenos Aires, Argentina" />
     <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
     <link rel="canonical" href={canonicalURL} />
+
+    <!-- ── Geo (SEO local Buenos Aires / Argentina) ── -->
+    <meta name="geo.region" content="AR-B" />
+    <meta name="geo.placename" content="Buenos Aires, Argentina" />
+    <meta name="geo.position" content="-34.603722;-58.381592" />
+    <meta name="ICBM" content="-34.603722, -58.381592" />
 
     <!-- ── Open Graph (Facebook / LinkedIn / WhatsApp) ── -->
     <meta property="og:type" content="website" />
@@ -100,13 +190,24 @@ const jsonLD = JSON.stringify({
     <link rel="apple-touch-icon" href="/logo/logo1.png" />
     <meta name="theme-color" content="#1a1a2e" />
 
-    <!-- ── JSON-LD: datos estructurados LocalBusiness ── -->
+    <!-- ── JSON-LD: datos estructurados LocalBusiness + WebSite ── -->
     <script type="application/ld+json" set:html={jsonLD} />
+    {pageSchema && (
+      <script type="application/ld+json" set:html={JSON.stringify(pageSchema)} />
+    )}
 
-    <!-- ── Google Fonts ── -->
+    <!-- ── Google Fonts (non-render-blocking | font-display:swap incluido) ── -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Barlow:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Barlow:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Barlow:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+    </noscript>
   </head>
   <body class="antialiased">
     <slot />

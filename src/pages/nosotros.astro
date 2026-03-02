@@ -5,12 +5,46 @@ import Header from '../components/Header.astro';
 import HeroNosotros from '../components/HeroNosotros.astro';
 import About from '../components/About.astro';
 import Footer from '../components/Footer.astro';
+
+const pageSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://www.s3aindustrial.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Quiénes Somos",
+        "item": "https://www.s3aindustrial.com/nosotros"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "@id": "https://www.s3aindustrial.com/nosotros",
+    "url": "https://www.s3aindustrial.com/nosotros",
+    "name": "Quiénes Somos - S3A Industrial",
+    "description": "S3A Industrial: empresa argentina especializada en sopladores industriales con experiencia comprobada. Equipo técnico capacitado, enfoque preventivo y compromiso con la continuidad operativa.",
+    "publisher": {
+      "@id": "https://www.s3aindustrial.com/#organization"
+    },
+    "inLanguage": "es-AR"
+  }
+];
 ---
 
 <Layout
   title="Quiénes Somos | S3A Industrial — Empresa Especialista en Sopladores Industriales"
   description="Conocé S3A Industrial: empresa argentina especializada en sopladores industriales con experiencia comprobada. Equipo técnico capacitado, enfoque preventivo y compromiso con la continuidad operativa de tu planta."
-  canonicalURL="https://s3aindustrial.com/nosotros"
+  canonicalURL="https://www.s3aindustrial.com/nosotros"
+  pageSchema={pageSchema}
 >
   <!-- Header fijo -->
   <Header />
