@@ -36,11 +36,6 @@
 
       <!-- 01 Ruido anormal -->
       <article class="signal-card reveal reveal-d1" role="listitem">
-        <div class="signal-icon-wrap signal-icon--amber">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15.536 8.464a5 5 0 010 7.072M12 6v12m0 0a9 9 0 01-9-9m9 9a9 9 0 009-9M3 12a9 9 0 019-9"/>
-          </svg>
-        </div>
         <div class="signal-num">01</div>
         <h3 class="signal-title">Ruido anormal</h3>
         <p class="signal-desc">Golpeteos, chirridos o ruidos metálicos inusuales durante el funcionamiento del equipo.</p>
@@ -49,11 +44,6 @@
 
       <!-- 02 Pérdida de caudal/presión -->
       <article class="signal-card reveal reveal-d2" role="listitem">
-        <div class="signal-icon-wrap signal-icon--red">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"/>
-          </svg>
-        </div>
         <div class="signal-num">02</div>
         <h3 class="signal-title">Pérdida de caudal / presión</h3>
         <p class="signal-desc">Caída en el rendimiento: el equipo ya no entrega el caudal o la presión nominales de diseño.</p>
@@ -62,12 +52,6 @@
 
       <!-- 03 Calentamiento excesivo -->
       <article class="signal-card reveal reveal-d3" role="listitem">
-        <div class="signal-icon-wrap signal-icon--orange">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/>
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/>
-          </svg>
-        </div>
         <div class="signal-num">03</div>
         <h3 class="signal-title">Calentamiento excesivo</h3>
         <p class="signal-desc">Temperatura de operación por encima de los valores normales; carcasa o lubricante sobrecalentados.</p>
@@ -76,11 +60,6 @@
 
       <!-- 04 Fugas de aceite / sellos -->
       <article class="signal-card reveal reveal-d4" role="listitem">
-        <div class="signal-icon-wrap signal-icon--blue">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 2C6 8 4 12 4 14a8 8 0 0016 0c0-2-2-6-8-12z"/>
-          </svg>
-        </div>
         <div class="signal-num">04</div>
         <h3 class="signal-title">Fugas en sellos / aceite</h3>
         <p class="signal-desc">Pérdidas de aceite o aire en juntas y sellos, manchas bajo el equipo o contaminación del proceso.</p>
@@ -89,11 +68,6 @@
 
       <!-- 05 Vibración excesiva -->
       <article class="signal-card reveal reveal-d5" role="listitem">
-        <div class="signal-icon-wrap signal-icon--amber">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/>
-          </svg>
-        </div>
         <div class="signal-num">05</div>
         <h3 class="signal-title">Vibración excesiva</h3>
         <p class="signal-desc">Vibraciones inusuales que se transmiten a la estructura, cañerías o accesorios del equipo.</p>
@@ -303,32 +277,6 @@
     transition: transform .45s cubic-bezier(.22,1,.36,1);
   }
   .signal-card:hover::before { transform: scaleX(1); }
-
-  /* ─── Icons ─────────────────── */
-  .signal-icon-wrap {
-    width: 52px; height: 52px;
-    border-radius: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 18px;
-    flex-shrink: 0;
-    transition: transform .4s cubic-bezier(.34,1.56,.64,1);
-  }
-  .signal-card:hover .signal-icon-wrap { transform: scale(1.1) rotate(-5deg); }
-  .signal-icon-wrap svg { width: 24px; height: 24px; }
-
-  .signal-icon--amber { background: rgba(245,158,11,.15); border: 1px solid rgba(245,158,11,.25); }
-  .signal-icon--amber svg { stroke: #f59e0b; }
-
-  .signal-icon--red   { background: rgba(226,92,92,.15); border: 1px solid rgba(226,92,92,.25); }
-  .signal-icon--red svg { stroke: #e25c5c; }
-
-  .signal-icon--orange { background: rgba(249,115,22,.15); border: 1px solid rgba(249,115,22,.25); }
-  .signal-icon--orange svg { stroke: #f97316; }
-
-  .signal-icon--blue  { background: rgba(96,165,250,.15); border: 1px solid rgba(96,165,250,.25); }
-  .signal-icon--blue svg { stroke: #60a5fa; }
 
   /* ─── Card content ───────────────── */
   .signal-num {
