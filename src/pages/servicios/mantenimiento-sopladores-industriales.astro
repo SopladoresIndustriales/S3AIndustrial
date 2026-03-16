@@ -1,0 +1,551 @@
+---
+// Página: /servicios/mantenimiento-sopladores-industriales
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import CTAFinal from '../../components/CTAFinalNew.astro';
+import Footer from '../../components/Footer.astro';
+
+const pageSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://www.s3aindustrial.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Servicios",
+        "item": "https://www.s3aindustrial.com/servicios"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Mantenimiento de Sopladores Industriales",
+        "item": "https://www.s3aindustrial.com/servicios/mantenimiento-sopladores-industriales"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Mantenimiento de Sopladores Industriales",
+    "description": "Planes de mantenimiento preventivo y correctivo para sopladores industriales en Buenos Aires y GBA. Inspecciones programadas, diagnóstico de señales de alerta y planes de mantenimiento personalizado.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "@id": "https://www.s3aindustrial.com/#organization"
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Buenos Aires",
+      "sameAs": "https://www.wikidata.org/wiki/Q44762"
+    },
+    "serviceType": "Mantenimiento Industrial",
+    "url": "https://www.s3aindustrial.com/servicios/mantenimiento-sopladores-industriales"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.s3aindustrial.com/servicios/mantenimiento-sopladores-industriales",
+    "url": "https://www.s3aindustrial.com/servicios/mantenimiento-sopladores-industriales",
+    "name": "Mantenimiento de Sopladores Industriales | S3A Industrial – Buenos Aires",
+    "description": "Mantenimiento preventivo y correctivo de sopladores industriales en Buenos Aires y GBA. Planes programados para evitar paradas de planta.",
+    "publisher": {
+      "@id": "https://www.s3aindustrial.com/#organization"
+    },
+    "inLanguage": "es-AR",
+    "isPartOf": {
+      "@id": "https://www.s3aindustrial.com/#website"
+    }
+  }
+];
+---
+
+<Layout
+  title="Mantenimiento de Sopladores Industriales | S3A Industrial – Buenos Aires"
+  description="Mantenimiento preventivo y correctivo de sopladores industriales en Buenos Aires y GBA. Planes programados, diagnóstico de señales de alerta y servicio en planta para evitar paradas no planificadas."
+  canonicalURL="https://www.s3aindustrial.com/servicios/mantenimiento-sopladores-industriales"
+  pageSchema={pageSchema}
+>
+  <Header />
+
+  <main>
+    <!-- ── HERO ── -->
+    <section class="relative min-h-[80vh] lg:min-h-[85vh] flex items-center overflow-hidden bg-black pt-32 md:pt-36 lg:pt-44">
+      <div class="absolute inset-0">
+        <img
+          src="/imagenes/S3AImagnes/repickydesktop1.png"
+          alt="Mantenimiento preventivo de sopladores industriales en planta"
+          class="hero-img hero-img--desktop w-full h-full object-cover opacity-60"
+          style="object-position: center 0%;"
+          fetchpriority="high"
+          decoding="sync"
+        />
+        <img
+          src="/imagenes/S3AImagnes/repicky18.png"
+          alt="Mantenimiento preventivo de sopladores industriales en planta"
+          class="hero-img hero-img--mobile w-full h-full object-cover opacity-60"
+          style="object-position: center center;"
+          fetchpriority="high"
+          decoding="sync"
+        />
+        <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
+      </div>
+
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: repeating-linear-gradient(90deg, transparent, transparent 15px, rgba(170, 126, 86, 0.08) 15px, rgba(170, 126, 86, 0.08) 30px);"></div>
+      </div>
+
+      <div class="w-full max-w-6xl mx-auto relative z-10" style="padding-left: clamp(2rem, 8vw, 7rem); padding-right: clamp(1.5rem, 5vw, 4rem);">
+        <div class="text-white">
+          <nav style="font-family: var(--font-body);" class="text-xs md:text-sm mb-5 opacity-80 tracking-widest uppercase flex items-center gap-2 flex-wrap">
+            <a href="/" class="hover:text-white transition-colors font-medium text-white/70">Inicio</a>
+            <span class="text-white/40">•</span>
+            <a href="/servicios" class="hover:text-white transition-colors font-medium text-white/70">Servicios</a>
+            <span class="text-white/40">•</span>
+            <span class="text-white font-semibold">Mantenimiento</span>
+          </nav>
+
+          <h1 style="
+            font-family: var(--font-display);
+            letter-spacing: 0.03em;
+            background: linear-gradient(135deg, #ffffff 0%, #b0c8d8 50%, #334c60 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            filter: drop-shadow(0 2px 16px rgba(0,0,0,0.8));
+          " class="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-normal mb-6 leading-none uppercase">
+            Mantenimiento<br />Preventivo y Correctivo<br /><span style="font-size:.7em;">de Sopladores Industriales</span>
+          </h1>
+
+          <div class="w-20 h-[3px] mb-6" style="background: linear-gradient(90deg, #ffffff, #334c60);"></div>
+
+          <p style="font-family: var(--font-body); text-shadow: 0 1px 8px rgba(0,0,0,0.8);" class="text-base md:text-lg lg:text-xl max-w-xl mb-8 leading-relaxed font-light text-white/90">
+            Planes de mantenimiento programado para prolongar la vida útil de sus equipos y evitar paradas no planificadas en su planta de <strong class="text-white">Buenos Aires o GBA</strong>.
+          </p>
+
+          <div style="font-family: var(--font-heading);" class="flex flex-wrap gap-3 md:gap-4 text-sm md:text-base font-semibold uppercase tracking-wider">
+            <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur">
+              <div class="w-2 h-2 bg-golden-light rounded-full"></div>
+              <span>Preventivo Programado</span>
+            </div>
+            <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur">
+              <div class="w-2 h-2 bg-golden rounded-full"></div>
+              <span>Correctivo de Emergencia</span>
+            </div>
+            <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur">
+              <div class="w-2 h-2 bg-white/60 rounded-full"></div>
+              <span>Reportes Técnicos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="absolute bottom-0 left-0 right-0 h-[3px]" style="background: linear-gradient(90deg, transparent 0%, #aa7e56 30%, #cca373 60%, #aa7e56 80%, transparent 100%);"></div>
+    </section>
+
+    <!-- ── CONTENT SECTION ── -->
+    <section class="svc-detail-section">
+      <div class="svc-orb svc-orb-1"></div>
+      <div class="svc-orb svc-orb-2"></div>
+      <div class="svc-grid-overlay"></div>
+      <div class="svc-edge-top"></div>
+
+      <div class="svc-detail-container">
+
+        <!-- ENCABEZADO -->
+        <div class="svc-detail-header animate-on-scroll">
+          <div class="svc-eyebrow">
+            <span class="svc-eyebrow-rule"></span>
+            <span class="svc-eyebrow-text">Continuidad operativa</span>
+            <span class="svc-eyebrow-rule svc-eyebrow-rule--r"></span>
+          </div>
+          <h2 class="svc-detail-title">Proteja su inversión con <em>mantenimiento profesional</em></h2>
+          <div class="svc-scratch"></div>
+          <p class="svc-detail-subtitle">
+            Un soplador industrial bien mantenido puede operar durante décadas. Un equipo descuidado puede fallar
+            en el momento más crítico. Diseñamos planes de mantenimiento a medida para plantas industriales de
+            <strong style="color:#cca373;">Buenos Aires y Gran Buenos Aires</strong>.
+          </p>
+        </div>
+
+        <!-- PREVENTIVO VS CORRECTIVO -->
+        <div class="svc-comparison animate-on-scroll">
+          <div class="svc-comparison-card svc-comparison-card--preventive">
+            <div class="svc-comp-badge">Más recomendado</div>
+            <div class="svc-comp-icon">
+              <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+              </svg>
+            </div>
+            <h2 class="svc-comp-title">Mantenimiento Preventivo</h2>
+            <p class="svc-comp-desc">
+              Consiste en intervenciones programadas antes de que ocurra la falla. Se inspeccionan y reemplazan componentes
+              por desgaste programado, se ajustan parámetros y se lubrica en ciclos definidos según las horas de operación
+              o el calendario.
+            </p>
+            <ul class="svc-comp-list">
+              <li>Inspecciones periódicas programadas</li>
+              <li>Lubricación y ajuste de componentes</li>
+              <li>Reemplazo de filtros, correas y retenes</li>
+              <li>Verificación de alineación y balanceo</li>
+              <li>Medición de vibración y temperatura</li>
+              <li>Informe técnico del estado del equipo</li>
+            </ul>
+            <div class="svc-comp-benefit">
+              <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+              Reduce el costo total de mantenimiento hasta un 40% respecto al correctivo puro
+            </div>
+          </div>
+
+          <div class="svc-comparison-card svc-comparison-card--corrective">
+            <div class="svc-comp-icon">
+              <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h2 class="svc-comp-title">Mantenimiento Correctivo</h2>
+            <p class="svc-comp-desc">
+              Intervención ante una falla ya ocurrida. Nuestro equipo se desplaza a la planta para diagnosticar y resolver
+              el problema de la forma más rápida posible, minimizando el tiempo de parada del proceso.
+            </p>
+            <ul class="svc-comp-list">
+              <li>Respuesta rápida ante fallas inesperadas</li>
+              <li>Diagnóstico en sitio en Buenos Aires y GBA</li>
+              <li>Reparación de componentes dañados</li>
+              <li>Reemplazo de piezas fuera de tolerancia</li>
+              <li>Prueba de funcionamiento post-intervención</li>
+              <li>Recomendaciones para prevenir recurrencia</li>
+            </ul>
+            <div class="svc-comp-benefit svc-comp-benefit--neutral">
+              <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Disponibilidad para emergencias industriales en Buenos Aires
+            </div>
+          </div>
+        </div>
+
+        <!-- SEÑALES DE ALERTA -->
+        <div class="svc-alerts animate-on-scroll">
+          <h2 class="svc-alerts-title">Señales de alerta en su soplador industrial</h2>
+          <p class="svc-alerts-intro">
+            Estos síntomas indican que su equipo necesita una revisión técnica urgente. No espere a que se produzca una
+            parada de planta para actuar:
+          </p>
+          <div class="svc-alerts-grid">
+            <div class="svc-alert-item">
+              <div class="svc-alert-icon">
+                <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15.536 8.464a5 5 0 010 7.072M12 18.5v.01M8.464 15.536a5 5 0 010-7.072M6.343 17.657a8 8 0 010-11.314M17.657 6.343a8 8 0 010 11.314"/></svg>
+              </div>
+              <div>
+                <h3 class="svc-alert-heading">Ruido o vibración anormal</h3>
+                <p class="svc-alert-body">Golpeteo, silbido o vibración excesiva son señales tempranas de desgaste en rodamientos, lóbulos o desbalanceo del impulsor. Detectarlo a tiempo evita daños catastróficos.</p>
+              </div>
+            </div>
+            <div class="svc-alert-item">
+              <div class="svc-alert-icon">
+                <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+              </div>
+              <div>
+                <h3 class="svc-alert-heading">Pérdida de caudal o presión</h3>
+                <p class="svc-alert-body">Si el proceso requiere más caudal o el soplador ya no alcanza la presión nominal, el equipo puede estar sufriendo slip interno por desgaste o tener un problema en válvulas y conductos.</p>
+              </div>
+            </div>
+            <div class="svc-alert-item">
+              <div class="svc-alert-icon">
+                <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.974 7.974 0 01-2.343 5.657z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/></svg>
+              </div>
+              <div>
+                <h3 class="svc-alert-heading">Temperatura de descarga elevada</h3>
+                <p class="svc-alert-body">El sobrecalentamiento en la descarga indica operación fuera del punto de diseño, falta de lubricación o acumulación de sólidos. Puede precipitar fallas en sellos y dilatación de componentes internos.</p>
+              </div>
+            </div>
+            <div class="svc-alert-item">
+              <div class="svc-alert-icon">
+                <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <div>
+                <h3 class="svc-alert-heading">Consumo eléctrico excesivo</h3>
+                <p class="svc-alert-body">Un aumento significativo en el consumo del motor sin cambio en el proceso productivo puede indicar rozamiento interno, fallo en rodamientos o pérdidas por slip que obligan al motor a trabajar más.</p>
+              </div>
+            </div>
+            <div class="svc-alert-item">
+              <div class="svc-alert-icon">
+                <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"/></svg>
+              </div>
+              <div>
+                <h3 class="svc-alert-heading">Fugas de aceite o lubricante</h3>
+                <p class="svc-alert-body">Las manchas de aceite en la base o en la tubería de descarga indican sellos deteriorados. En procesos alimentarios, farmacéuticos o de tratamiento de agua, una fuga puede comprometer la calidad del producto.</p>
+              </div>
+            </div>
+            <div class="svc-alert-item">
+              <div class="svc-alert-icon">
+                <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M20.618 5.984A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              </div>
+              <div>
+                <h3 class="svc-alert-heading">Arranques frecuentes o disparo de térmicos</h3>
+                <p class="svc-alert-body">Si el guardamotor o la protección térmica actúa con frecuencia, el soplador puede estar traccionando de más por problema mecánico o eléctrico que requiere intervención inmediata.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PLANES DE MANTENIMIENTO -->
+        <div class="svc-plans animate-on-scroll">
+          <h2 class="svc-plans-title">Planes de mantenimiento programado</h2>
+          <p class="svc-plans-intro">
+            Diseñamos planes de mantenimiento preventivo a medida para su operación en Argentina,
+            adaptados a la criticidad del equipo, las horas de uso y las exigencias del proceso productivo.
+          </p>
+          <div class="svc-plans-grid">
+            <div class="svc-plan-card">
+              <div class="svc-plan-header">
+                <div class="svc-plan-tag">Inspección</div>
+                <h3 class="svc-plan-name">Plan Básico</h3>
+                <p class="svc-plan-freq">Cada 500 horas o 3 meses</p>
+              </div>
+              <ul class="svc-plan-items">
+                <li>Revisión de filtros de aire</li>
+                <li>Control de nivel de lubricante</li>
+                <li>Medición de vibración y temperatura</li>
+                <li>Inspección visual de correas y acoples</li>
+                <li>Informe de estado del equipo</li>
+              </ul>
+            </div>
+            <div class="svc-plan-card svc-plan-card--featured">
+              <div class="svc-plan-header">
+                <div class="svc-plan-tag svc-plan-tag--featured">Recomendado</div>
+                <h3 class="svc-plan-name">Plan Intermedio</h3>
+                <p class="svc-plan-freq">Cada 2.000 horas o 6 meses</p>
+              </div>
+              <ul class="svc-plan-items">
+                <li>Todo lo del Plan Básico incluido</li>
+                <li>Cambio de aceite y lubricantes</li>
+                <li>Reemplazo de filtros</li>
+                <li>Verificación de alineación</li>
+                <li>Ajuste de precintos y sellos</li>
+                <li>Limpieza interna de carcasa</li>
+                <li>Informe técnico completo</li>
+              </ul>
+            </div>
+            <div class="svc-plan-card">
+              <div class="svc-plan-header">
+                <div class="svc-plan-tag">Revisión general</div>
+                <h3 class="svc-plan-name">Plan Completo</h3>
+                <p class="svc-plan-freq">Cada 8.000 horas o anual</p>
+              </div>
+              <ul class="svc-plan-items">
+                <li>Todo lo del Plan Intermedio incluido</li>
+                <li>Apertura y revisión interna completa</li>
+                <li>Medición de holguras de lóbulos</li>
+                <li>Reemplazo preventivo de rodamientos</li>
+                <li>Inspección de engranajes y sincronismo</li>
+                <li>Prueba funcional con informe de parámetros</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- BENEFICIOS -->
+        <div class="svc-benefits animate-on-scroll">
+          <h2 class="svc-benefits-title">Beneficios del mantenimiento programado</h2>
+          <div class="svc-benefits-grid">
+            <div class="svc-benefit-item">
+              <div class="svc-benefit-num">01</div>
+              <h3 class="svc-benefit-heading">Evitá paradas de planta no planificadas</h3>
+              <p class="svc-benefit-body">Una parada de producción en planta implica pérdida directa de output, costos de mano de obra ociosa y presiones sobre los plazos de entrega. El mantenimiento preventivo elimina el factor sorpresa.</p>
+            </div>
+            <div class="svc-benefit-item">
+              <div class="svc-benefit-num">02</div>
+              <h3 class="svc-benefit-heading">Prolongá la vida útil del equipo</h3>
+              <p class="svc-benefit-body">Un soplador con mantenimiento regular puede operar el doble de tiempo que uno abandonado. La inversión en mantenimiento es significativamente menor al costo de reposición del equipo.</p>
+            </div>
+            <div class="svc-benefit-item">
+              <div class="svc-benefit-num">03</div>
+              <h3 class="svc-benefit-heading">Reducí el consumo energético</h3>
+              <p class="svc-benefit-body">Un soplador en buen estado opera en su punto de eficiencia óptimo. El desgaste interno incrementa el trabajo del motor sin aumentar el caudal, elevando el costo energético de la operación.</p>
+            </div>
+            <div class="svc-benefit-item">
+              <div class="svc-benefit-num">04</div>
+              <h3 class="svc-benefit-heading">Historial técnico documentado</h3>
+              <p class="svc-benefit-body">Cada intervención genera un informe técnico que documenta el estado del equipo, las acciones ejecutadas y las recomendaciones para la próxima visita. Información valiosa para decisiones de ingeniería.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- RELATED LINKS -->
+        <div class="svc-related animate-on-scroll">
+          <p class="svc-related-label">Servicios relacionados</p>
+          <div class="svc-related-links">
+            <a href="/servicios/reparacion-sopladores-industriales" class="svc-related-link">
+              Reparación de Sopladores Industriales
+              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+            </a>
+            <a href="/servicios/reparacion-sopladores-roots" class="svc-related-link">
+              Reparación de Sopladores Roots
+              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+            </a>
+            <a href="/servicios" class="svc-related-link">
+              Ver todos los servicios
+              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- CTA STRIP -->
+        <div class="svc-cta-strip animate-on-scroll">
+          <div class="svc-cta-content">
+            <div class="svc-cta-icon">
+              <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="svc-cta-title">¿Necesita un plan de mantenimiento para su planta?</h3>
+              <p class="svc-cta-text">Evaluamos su operación y diseñamos un plan preventivo personalizado para sus sopladores en Buenos Aires y GBA.</p>
+            </div>
+          </div>
+          <div class="svc-cta-actions">
+            <a href="https://wa.me/5491124599330?text=Hola%2C%20necesito%20un%20plan%20de%20mantenimiento%20para%20mis%20sopladores" target="_blank" rel="noopener noreferrer" class="svc-cta-btn svc-cta-btn--whatsapp">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.078 23.926A.5.5 0 00.572 24l6.212-1.433A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.896 0-3.67-.5-5.2-1.376l-.374-.22-3.883.896.933-3.795-.241-.39A9.946 9.946 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+              Consultar por WhatsApp
+            </a>
+            <a href="/contacto" class="svc-cta-btn svc-cta-btn--primary">
+              Solicitar plan de mantenimiento
+              <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="svc-edge-bottom"></div>
+    </section>
+
+    <CTAFinal />
+    <Footer />
+  </main>
+</Layout>
+
+<style>
+  .hero-img--desktop { display: none; }
+  .hero-img--mobile  { display: block; }
+  @media (min-width: 1024px) {
+    .hero-img--desktop { display: block; }
+    .hero-img--mobile  { display: none; }
+  }
+
+  .svc-detail-section {
+    position: relative; padding: 110px 0 120px; overflow: hidden;
+    background: linear-gradient(170deg, #13202a 0%, #1a2d3a 40%, #1e3040 70%, #141f27 100%);
+    color: #fff;
+  }
+  .svc-orb { position: absolute; border-radius: 50%; filter: blur(90px); pointer-events: none; }
+  .svc-orb-1 { width: 520px; height: 520px; top: -120px; left: -100px; background: radial-gradient(circle, rgba(170,126,86,.14) 0%, transparent 70%); }
+  .svc-orb-2 { width: 440px; height: 440px; bottom: -80px; right: -80px; background: radial-gradient(circle, rgba(123,84,51,.10) 0%, transparent 70%); }
+  .svc-grid-overlay {
+    position: absolute; inset: 0;
+    background:
+      repeating-linear-gradient(90deg, transparent 0px, transparent 79px, rgba(255,255,255,.014) 79px, rgba(255,255,255,.014) 80px),
+      repeating-linear-gradient(0deg, transparent 0px, transparent 79px, rgba(255,255,255,.014) 79px, rgba(255,255,255,.014) 80px);
+    pointer-events: none;
+  }
+  .svc-edge-top, .svc-edge-bottom {
+    position: absolute; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, transparent 0%, rgba(170,126,86,.5) 20%, #cca373 50%, rgba(170,126,86,.5) 80%, transparent 100%);
+    pointer-events: none;
+  }
+  .svc-edge-top { top: 0; }
+  .svc-edge-bottom { bottom: 0; }
+
+  .svc-detail-container { max-width: 1200px; margin: 0 auto; padding: 0 clamp(1.5rem, 5vw, 4rem); position: relative; z-index: 1; }
+
+  .svc-detail-header { text-align: center; margin-bottom: 72px; }
+  .svc-eyebrow { display: inline-flex; align-items: center; gap: 14px; margin-bottom: 20px; }
+  .svc-eyebrow-rule { display: block; width: 40px; height: 2px; background: linear-gradient(90deg, transparent, #cca373); border-radius: 2px; }
+  .svc-eyebrow-rule--r { background: linear-gradient(90deg, #cca373, transparent); }
+  .svc-eyebrow-text { font-family: 'Barlow Condensed', sans-serif; font-size: .75rem; font-weight: 700; letter-spacing: .20em; text-transform: uppercase; color: #cca373; }
+  .svc-detail-title { font-family: var(--font-display); font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 400; text-transform: uppercase; color: #fff; letter-spacing: .04em; margin-bottom: 12px; }
+  .svc-detail-title em { font-style: normal; background: linear-gradient(135deg, #cca373, #aa7e56); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .svc-scratch { width: 60px; height: 3px; margin: 0 auto 20px; background: linear-gradient(90deg, #aa7e56, #cca373); border-radius: 2px; }
+  .svc-detail-subtitle { font-family: var(--font-body); font-size: 1rem; line-height: 1.7; color: rgba(255,255,255,.75); max-width: 640px; margin: 0 auto; }
+
+  /* Comparison cards */
+  .svc-comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 80px; }
+  @media (max-width: 840px) { .svc-comparison { grid-template-columns: 1fr; } }
+  .svc-comparison-card { position: relative; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); border-radius: 6px; padding: 36px 32px; }
+  .svc-comparison-card--preventive { border-color: rgba(170,126,86,.3); background: rgba(170,126,86,.06); }
+  @media (max-width: 640px) { .svc-comparison-card { padding: 24px 20px; } }
+  .svc-comp-badge { position: absolute; top: -12px; left: 24px; background: linear-gradient(135deg, #aa7e56, #cca373); color: #fff; font-family: 'Barlow Condensed', sans-serif; font-size: .72rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; padding: 4px 14px; border-radius: 20px; }
+  .svc-comp-icon { color: #cca373; margin-bottom: 16px; }
+  .svc-comp-title { font-family: var(--font-display); font-size: clamp(1.4rem, 2vw, 1.9rem); text-transform: uppercase; letter-spacing: .04em; color: #fff; margin-bottom: 14px; }
+  .svc-comp-desc { font-family: var(--font-body); font-size: .9rem; line-height: 1.75; color: rgba(255,255,255,.7); margin-bottom: 20px; }
+  .svc-comp-list { list-style: none; padding: 0; margin: 0 0 24px; display: flex; flex-direction: column; gap: 8px; }
+  .svc-comp-list li { font-family: var(--font-body); font-size: .875rem; color: rgba(255,255,255,.75); padding-left: 18px; position: relative; }
+  .svc-comp-list li::before { content: ''; position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background: #aa7e56; border-radius: 50%; }
+  .svc-comp-benefit { display: flex; align-items: flex-start; gap: 8px; font-family: var(--font-body); font-size: .8rem; color: #cca373; background: rgba(170,126,86,.1); border: 1px solid rgba(170,126,86,.2); padding: 10px 14px; border-radius: 4px; }
+  .svc-comp-benefit--neutral { color: rgba(255,255,255,.65); background: rgba(255,255,255,.04); border-color: rgba(255,255,255,.1); }
+
+  /* Alerts */
+  .svc-alerts { margin-bottom: 72px; }
+  .svc-alerts-title { font-family: var(--font-display); font-size: clamp(1.6rem, 3vw, 2.4rem); text-transform: uppercase; letter-spacing: .04em; color: #fff; margin-bottom: 12px; }
+  .svc-alerts-intro { font-family: var(--font-body); font-size: .95rem; line-height: 1.7; color: rgba(255,255,255,.7); margin-bottom: 32px; max-width: 700px; }
+  .svc-alerts-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  @media (max-width: 700px) { .svc-alerts-grid { grid-template-columns: 1fr; } }
+  .svc-alert-item { display: flex; align-items: flex-start; gap: 16px; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.07); border-radius: 4px; padding: 20px; transition: border-color .3s; }
+  .svc-alert-item:hover { border-color: rgba(170,126,86,.25); }
+  .svc-alert-icon { color: #cca373; flex-shrink: 0; margin-top: 2px; }
+  .svc-alert-heading { font-family: var(--font-heading); font-size: .9rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: #fff; margin-bottom: 6px; }
+  .svc-alert-body { font-family: var(--font-body); font-size: .85rem; line-height: 1.65; color: rgba(255,255,255,.65); }
+
+  /* Plans */
+  .svc-plans { margin-bottom: 72px; }
+  .svc-plans-title { font-family: var(--font-display); font-size: clamp(1.6rem, 3vw, 2.4rem); text-transform: uppercase; letter-spacing: .04em; color: #fff; margin-bottom: 12px; }
+  .svc-plans-intro { font-family: var(--font-body); font-size: .95rem; line-height: 1.7; color: rgba(255,255,255,.7); margin-bottom: 32px; }
+  .svc-plans-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  @media (max-width: 900px) { .svc-plans-grid { grid-template-columns: 1fr; } }
+  .svc-plan-card { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); border-radius: 6px; overflow: hidden; }
+  .svc-plan-card--featured { border-color: rgba(170,126,86,.3); background: rgba(170,126,86,.06); }
+  .svc-plan-header { padding: 24px 24px 20px; border-bottom: 1px solid rgba(255,255,255,.07); }
+  .svc-plan-tag { display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-size: .7rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: rgba(255,255,255,.5); background: rgba(255,255,255,.07); padding: 3px 10px; border-radius: 3px; margin-bottom: 8px; }
+  .svc-plan-tag--featured { color: #cca373; background: rgba(170,126,86,.15); }
+  .svc-plan-name { font-family: var(--font-display); font-size: 1.5rem; text-transform: uppercase; letter-spacing: .04em; color: #fff; margin-bottom: 4px; }
+  .svc-plan-freq { font-family: var(--font-body); font-size: .8rem; color: rgba(255,255,255,.5); }
+  .svc-plan-items { list-style: none; padding: 20px 24px; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+  .svc-plan-items li { font-family: var(--font-body); font-size: .875rem; color: rgba(255,255,255,.75); padding-left: 18px; position: relative; }
+  .svc-plan-items li::before { content: ''; position: absolute; left: 0; top: 8px; width: 6px; height: 6px; background: #aa7e56; border-radius: 50%; }
+
+  /* Benefits */
+  .svc-benefits { background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.07); border-radius: 6px; padding: 48px; margin-bottom: 56px; }
+  @media (max-width: 640px) { .svc-benefits { padding: 28px 20px; } }
+  .svc-benefits-title { font-family: var(--font-display); font-size: clamp(1.4rem, 2.5vw, 2rem); text-transform: uppercase; letter-spacing: .04em; color: #fff; margin-bottom: 36px; }
+  .svc-benefits-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+  @media (max-width: 700px) { .svc-benefits-grid { grid-template-columns: 1fr; } }
+  .svc-benefit-item { display: flex; gap: 20px; }
+  .svc-benefit-num { font-family: var(--font-display); font-size: 2rem; line-height: 1; color: #aa7e56; min-width: 48px; flex-shrink: 0; }
+  .svc-benefit-heading { font-family: var(--font-heading); font-size: .9rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: #fff; margin-bottom: 8px; }
+  .svc-benefit-body { font-family: var(--font-body); font-size: .875rem; line-height: 1.7; color: rgba(255,255,255,.65); }
+
+  /* Related */
+  .svc-related { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 48px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .svc-related-label { font-family: 'Barlow Condensed', sans-serif; font-size: .75rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: rgba(255,255,255,.45); margin-right: 4px; }
+  .svc-related-links { display: flex; flex-wrap: wrap; gap: 10px; }
+  .svc-related-link { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-body); font-size: .8rem; font-weight: 500; color: #cca373; background: rgba(170,126,86,.1); border: 1px solid rgba(170,126,86,.2); padding: 6px 14px; border-radius: 3px; text-decoration: none; transition: background .25s, border-color .25s, color .25s; }
+  .svc-related-link:hover { background: rgba(170,126,86,.2); border-color: rgba(204,163,115,.5); color: #fff; }
+
+  /* CTA strip */
+  .svc-cta-strip { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px; background: rgba(170,126,86,.08); border: 1px solid rgba(170,126,86,.2); border-radius: 6px; padding: 28px 36px; }
+  @media (max-width: 640px) { .svc-cta-strip { padding: 20px; } }
+  .svc-cta-content { display: flex; align-items: flex-start; gap: 16px; flex: 1; min-width: 260px; }
+  .svc-cta-icon { color: #cca373; flex-shrink: 0; margin-top: 2px; }
+  .svc-cta-title { font-family: var(--font-heading); font-size: 1.05rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: #fff; margin-bottom: 4px; }
+  .svc-cta-text { font-family: var(--font-body); font-size: .85rem; color: rgba(255,255,255,.65); }
+  .svc-cta-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+  .svc-cta-btn { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-heading); font-size: .85rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; padding: 12px 22px; border-radius: 3px; text-decoration: none; transition: opacity .25s, transform .2s; }
+  .svc-cta-btn:hover { opacity: .88; transform: translateY(-1px); }
+  .svc-cta-btn--whatsapp { background: #25d366; color: #fff; }
+  .svc-cta-btn--primary { background: linear-gradient(135deg, #aa7e56, #cca373); color: #fff; }
+</style>

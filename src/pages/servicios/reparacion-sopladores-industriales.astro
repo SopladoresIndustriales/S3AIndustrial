@@ -1,0 +1,686 @@
+---
+// Página: /servicios/reparacion-sopladores-industriales
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import CTAFinal from '../../components/CTAFinalNew.astro';
+import Footer from '../../components/Footer.astro';
+
+const pageSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://www.s3aindustrial.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Servicios",
+        "item": "https://www.s3aindustrial.com/servicios"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Reparación de Sopladores Industriales",
+        "item": "https://www.s3aindustrial.com/servicios/reparacion-sopladores-industriales"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Reparación de Sopladores Industriales",
+    "description": "Servicio especializado de diagnóstico y reparación de sopladores industriales en planta del cliente. Atendemos todas las marcas y modelos en Buenos Aires y Gran Buenos Aires.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "@id": "https://www.s3aindustrial.com/#organization"
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Buenos Aires",
+      "sameAs": "https://www.wikidata.org/wiki/Q44762"
+    },
+    "serviceType": "Reparación de Equipos Industriales",
+    "url": "https://www.s3aindustrial.com/servicios/reparacion-sopladores-industriales"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.s3aindustrial.com/servicios/reparacion-sopladores-industriales",
+    "url": "https://www.s3aindustrial.com/servicios/reparacion-sopladores-industriales",
+    "name": "Reparación de Sopladores Industriales | S3A Industrial – Buenos Aires",
+    "description": "Diagnóstico y reparación integral de sopladores industriales en planta. Todas las marcas y modelos, respuesta rápida en Buenos Aires y GBA.",
+    "publisher": {
+      "@id": "https://www.s3aindustrial.com/#organization"
+    },
+    "inLanguage": "es-AR",
+    "isPartOf": {
+      "@id": "https://www.s3aindustrial.com/#website"
+    }
+  }
+];
+---
+
+<Layout
+  title="Reparación de Sopladores Industriales | S3A Industrial – Buenos Aires"
+  description="Reparación de sopladores industriales en planta: diagnóstico en sitio, reparación mecánica y eléctrica, pruebas post-reparación. Todas las marcas. Servicio en Buenos Aires y GBA."
+  canonicalURL="https://www.s3aindustrial.com/servicios/reparacion-sopladores-industriales"
+  pageSchema={pageSchema}
+>
+  <Header />
+
+  <main>
+    <!-- ── HERO ── -->
+    <section class="relative min-h-[80vh] lg:min-h-[85vh] flex items-center overflow-hidden bg-black pt-32 md:pt-36 lg:pt-44">
+      <!-- Background Image -->
+      <div class="absolute inset-0">
+        <img
+          src="/imagenes/S3AImagnes/repickydesktop5.png"
+          alt="Reparación de sopladores industriales en planta"
+          class="hero-img hero-img--desktop w-full h-full object-cover opacity-60"
+          style="object-position: center 0%;"
+          fetchpriority="high"
+          decoding="sync"
+        />
+        <img
+          src="/imagenes/S3AImagnes/repicky23.png"
+          alt="Reparación de sopladores industriales en planta"
+          class="hero-img hero-img--mobile w-full h-full object-cover opacity-60"
+          style="object-position: center center;"
+          fetchpriority="high"
+          decoding="sync"
+        />
+        <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
+      </div>
+
+      <!-- Background pattern -->
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: repeating-linear-gradient(90deg, transparent, transparent 15px, rgba(170, 126, 86, 0.08) 15px, rgba(170, 126, 86, 0.08) 30px);"></div>
+      </div>
+
+      <!-- Content -->
+      <div class="w-full max-w-6xl mx-auto relative z-10" style="padding-left: clamp(2rem, 8vw, 7rem); padding-right: clamp(1.5rem, 5vw, 4rem);">
+        <div class="text-white">
+          <!-- Breadcrumb -->
+          <nav style="font-family: var(--font-body);" class="text-xs md:text-sm mb-5 opacity-80 tracking-widest uppercase flex items-center gap-2 flex-wrap">
+            <a href="/" class="hover:text-white transition-colors font-medium text-white/70">Inicio</a>
+            <span class="text-white/40">•</span>
+            <a href="/servicios" class="hover:text-white transition-colors font-medium text-white/70">Servicios</a>
+            <span class="text-white/40">•</span>
+            <span class="text-white font-semibold">Reparación de Sopladores</span>
+          </nav>
+
+          <!-- H1 -->
+          <h1 style="
+            font-family: var(--font-display);
+            letter-spacing: 0.03em;
+            background: linear-gradient(135deg, #ffffff 0%, #b0c8d8 50%, #334c60 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            filter: drop-shadow(0 2px 16px rgba(0,0,0,0.8));
+          " class="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-normal mb-6 leading-none uppercase">
+            Reparación de<br />Sopladores Industriales
+          </h1>
+
+          <!-- Accent line -->
+          <div class="w-20 h-[3px] mb-6" style="background: linear-gradient(90deg, #ffffff, #334c60);"></div>
+
+          <!-- Subtitle -->
+          <p style="font-family: var(--font-body); text-shadow: 0 1px 8px rgba(0,0,0,0.8);" class="text-base md:text-lg lg:text-xl max-w-xl mb-8 leading-relaxed font-light text-white/90">
+            Diagnóstico y reparación integral en planta del cliente. Todas las marcas y modelos,
+            respuesta rápida en <strong class="text-white">Buenos Aires y GBA</strong>.
+          </p>
+
+          <!-- Highlights -->
+          <div style="font-family: var(--font-heading);" class="flex flex-wrap gap-3 md:gap-4 text-sm md:text-base font-semibold uppercase tracking-wider">
+            <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur">
+              <div class="w-2 h-2 bg-golden-light rounded-full"></div>
+              <span>Diagnóstico en Sitio</span>
+            </div>
+            <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur">
+              <div class="w-2 h-2 bg-golden rounded-full"></div>
+              <span>Todas las Marcas</span>
+            </div>
+            <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full backdrop-blur">
+              <div class="w-2 h-2 bg-white/60 rounded-full"></div>
+              <span>Pruebas Post-Reparación</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Golden bottom separator -->
+      <div class="absolute bottom-0 left-0 right-0 h-[3px]" style="background: linear-gradient(90deg, transparent 0%, #aa7e56 30%, #cca373 60%, #aa7e56 80%, transparent 100%);"></div>
+    </section>
+
+    <!-- ── CONTENT SECTION ── -->
+    <section class="svc-detail-section">
+      <!-- Ambient orbs -->
+      <div class="svc-orb svc-orb-1"></div>
+      <div class="svc-orb svc-orb-2"></div>
+      <div class="svc-grid-overlay"></div>
+      <div class="svc-edge-top"></div>
+
+      <div class="svc-detail-container">
+
+        <!-- ENCABEZADO -->
+        <div class="svc-detail-header animate-on-scroll">
+          <div class="svc-eyebrow">
+            <span class="svc-eyebrow-rule"></span>
+            <span class="svc-eyebrow-text">Servicio especializado</span>
+            <span class="svc-eyebrow-rule svc-eyebrow-rule--r"></span>
+          </div>
+          <h2 class="svc-detail-title">Reparación integral <em>en su planta</em></h2>
+          <div class="svc-scratch"></div>
+          <p class="svc-detail-subtitle">
+            Nos desplazamos directamente a sus instalaciones en <strong>Buenos Aires y Gran Buenos Aires</strong> para minimizar
+            tiempos de parada y garantizar la continuidad operativa de su planta.
+          </p>
+        </div>
+
+        <!-- IMAGE + INTRO -->
+        <div class="svc-band animate-on-scroll">
+          <div class="svc-band-text">
+            <div class="svc-band-tag">
+              <span class="svc-band-dot"></span>
+              Servicio en planta
+            </div>
+            <h3 class="svc-band-heading">Diagnóstico preciso, reparación eficiente</h3>
+            <p class="svc-band-body">
+              Nuestro equipo técnico evalúa el estado del soplador in situ, identifica la causa raíz de la falla
+              y ejecuta la reparación sin necesidad de trasladar el equipo. Reducimos el tiempo de parada al mínimo
+              con un proceso sistemático y herramientas especializadas.
+            </p>
+            <div class="svc-band-stats">
+              <div class="svc-band-stat">
+                <span class="svc-band-stat-num">100<span class="svc-band-stat-unit">%</span></span>
+                <span class="svc-band-stat-label">Servicio en sitio</span>
+              </div>
+              <div class="svc-band-divider"></div>
+              <div class="svc-band-stat">
+                <span class="svc-band-stat-num">+10<span class="svc-band-stat-unit">años</span></span>
+                <span class="svc-band-stat-label">de experiencia</span>
+              </div>
+            </div>
+          </div>
+          <div class="svc-band-imgwrap">
+            <img src="/imagenes/S3AImagnes/repicky28.png" alt="Técnico reparando soplador industrial en planta" class="svc-band-img" loading="lazy" decoding="async" />
+            <div class="svc-band-overlay"></div>
+          </div>
+        </div>
+
+        <!-- FEATURES GRID -->
+        <div class="svc-features-grid">
+
+          <!-- Feature 1 -->
+          <div class="svc-feature-card animate-on-scroll">
+            <div class="svc-feature-bar"></div>
+            <div class="svc-feature-icon">
+              <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+              </svg>
+            </div>
+            <h3 class="svc-feature-title">Diagnóstico técnico en sitio</h3>
+            <p class="svc-feature-desc">Evaluación completa del equipo en sus instalaciones. Identificamos fallas mecánicas, eléctricas y de rendimiento con instrumental especializado, sin necesidad de desmontaje preventivo.</p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="svc-feature-card animate-on-scroll">
+            <div class="svc-feature-bar"></div>
+            <div class="svc-feature-icon">
+              <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3 class="svc-feature-title">Reparación mecánica y eléctrica</h3>
+            <p class="svc-feature-desc">Intervención integral sobre componentes de desgaste, rodamientos, sellos, impulsores, bobinados y sistemas de control. Trabajamos con los estándares técnicos exigidos por la industria.</p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="svc-feature-card animate-on-scroll">
+            <div class="svc-feature-bar"></div>
+            <div class="svc-feature-icon">
+              <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="svc-feature-title">Pruebas de funcionamiento post-reparación</h3>
+            <p class="svc-feature-desc">Una vez finalizada la intervención, verificamos caudal, presión, temperatura y vibración bajo condiciones reales de operación. Entregamos el equipo funcionando dentro de los parámetros de fábrica.</p>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="svc-feature-card animate-on-scroll">
+            <div class="svc-feature-bar"></div>
+            <div class="svc-feature-icon">
+              <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            </div>
+            <h3 class="svc-feature-title">Cobertura en Buenos Aires y GBA</h3>
+            <p class="svc-feature-desc">Brindamos servicio técnico en plantas industriales de la Ciudad Autónoma de Buenos Aires, Gran Buenos Aires y localidades del interior de la Provincia de Buenos Aires, Argentina.</p>
+          </div>
+
+          <!-- Feature 5 -->
+          <div class="svc-feature-card animate-on-scroll">
+            <div class="svc-feature-bar"></div>
+            <div class="svc-feature-icon">
+              <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+              </svg>
+            </div>
+            <h3 class="svc-feature-title">Todas las marcas y modelos</h3>
+            <p class="svc-feature-desc">Reparamos sopladores de lóbulos (roots), sopladores de tornillo, turbo sopladores y sopladores centrífugos de cualquier fabricante. Contamos con repuestos y know-how multimarca.</p>
+          </div>
+
+          <!-- Feature 6 -->
+          <div class="svc-feature-card animate-on-scroll">
+            <div class="svc-feature-bar"></div>
+            <div class="svc-feature-icon">
+              <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="svc-feature-title">Respuesta rápida ante emergencias</h3>
+            <p class="svc-feature-desc">Entendemos el impacto de una parada de planta no planificada. Coordinamos la intervención con la mayor urgencia posible para restablecer la operación de su proceso industrial.</p>
+          </div>
+        </div>
+
+        <!-- PROCESO -->
+        <div class="svc-process animate-on-scroll">
+          <h2 class="svc-process-title">Proceso de reparación paso a paso</h2>
+          <div class="svc-process-steps">
+            <div class="svc-step">
+              <span class="svc-step-num">01</span>
+              <div>
+                <h3 class="svc-step-heading">Contacto y coordinación</h3>
+                <p class="svc-step-body">Recibimos su consulta, relevamos los síntomas del equipo y coordinamos la visita técnica a su planta en Buenos Aires o GBA.</p>
+              </div>
+            </div>
+            <div class="svc-step">
+              <span class="svc-step-num">02</span>
+              <div>
+                <h3 class="svc-step-heading">Diagnóstico en sitio</h3>
+                <p class="svc-step-body">Nuestro técnico evalúa el soplador con instrumentos de medición, identifica la causa raíz y elabora el diagnóstico técnico con presupuesto.</p>
+              </div>
+            </div>
+            <div class="svc-step">
+              <span class="svc-step-num">03</span>
+              <div>
+                <h3 class="svc-step-heading">Ejecución de la reparación</h3>
+                <p class="svc-step-body">Con su aprobación, iniciamos la intervención mecánica y/o eléctrica utilizando repuestos de calidad compatibles con la marca y modelo del equipo.</p>
+              </div>
+            </div>
+            <div class="svc-step">
+              <span class="svc-step-num">04</span>
+              <div>
+                <h3 class="svc-step-heading">Prueba y verificación final</h3>
+                <p class="svc-step-body">Realizamos pruebas funcionales completas y entregamos el equipo operativo con informe técnico del trabajo realizado y garantía sobre la reparación.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RELATED LINKS -->
+        <div class="svc-related animate-on-scroll">
+          <p class="svc-related-label">Servicios relacionados</p>
+          <div class="svc-related-links">
+            <a href="/servicios/reparacion-sopladores-roots" class="svc-related-link">
+              Reparación de Sopladores Roots
+              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+            </a>
+            <a href="/servicios/mantenimiento-sopladores-industriales" class="svc-related-link">
+              Mantenimiento Preventivo y Correctivo
+              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+            </a>
+            <a href="/servicios" class="svc-related-link">
+              Ver todos los servicios
+              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- CTA STRIP -->
+        <div class="svc-cta-strip animate-on-scroll">
+          <div class="svc-cta-content">
+            <div class="svc-cta-icon">
+              <svg width="28" height="28" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="svc-cta-title">¿Su soplador presenta fallas?</h3>
+              <p class="svc-cta-text">Contáctenos para coordinar una visita técnica a su planta en Buenos Aires o GBA.</p>
+            </div>
+          </div>
+          <div class="svc-cta-actions">
+            <a href="https://wa.me/5491124599330?text=Hola%2C%20necesito%20reparaci%C3%B3n%20de%20un%20soplador%20industrial" target="_blank" rel="noopener noreferrer" class="svc-cta-btn svc-cta-btn--whatsapp">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.078 23.926A.5.5 0 00.572 24l6.212-1.433A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.896 0-3.67-.5-5.2-1.376l-.374-.22-3.883.896.933-3.795-.241-.39A9.946 9.946 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+              Consultar por WhatsApp
+            </a>
+            <a href="/contacto" class="svc-cta-btn svc-cta-btn--primary">
+              Solicitar cotización
+              <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="svc-edge-bottom"></div>
+    </section>
+
+    <!-- CTA Final -->
+    <CTAFinal />
+
+    <!-- Footer -->
+    <Footer />
+  </main>
+</Layout>
+
+<style>
+  /* ── Hero image toggle ── */
+  .hero-img--desktop { display: none; }
+  .hero-img--mobile  { display: block; }
+  @media (min-width: 1024px) {
+    .hero-img--desktop { display: block; }
+    .hero-img--mobile  { display: none; }
+  }
+
+  /* ── Content section ── */
+  .svc-detail-section {
+    position: relative;
+    padding: 110px 0 120px;
+    overflow: hidden;
+    background: linear-gradient(170deg, #13202a 0%, #1a2d3a 40%, #1e3040 70%, #141f27 100%);
+    color: #fff;
+  }
+  .svc-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    pointer-events: none;
+  }
+  .svc-orb-1 {
+    width: 520px; height: 520px;
+    top: -120px; left: -100px;
+    background: radial-gradient(circle, rgba(170,126,86,.14) 0%, transparent 70%);
+  }
+  .svc-orb-2 {
+    width: 440px; height: 440px;
+    bottom: -80px; right: -80px;
+    background: radial-gradient(circle, rgba(123,84,51,.10) 0%, transparent 70%);
+  }
+  .svc-grid-overlay {
+    position: absolute; inset: 0;
+    background:
+      repeating-linear-gradient(90deg, transparent 0px, transparent 79px, rgba(255,255,255,.014) 79px, rgba(255,255,255,.014) 80px),
+      repeating-linear-gradient(0deg, transparent 0px, transparent 79px, rgba(255,255,255,.014) 79px, rgba(255,255,255,.014) 80px);
+    pointer-events: none;
+  }
+  .svc-edge-top, .svc-edge-bottom {
+    position: absolute; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, transparent 0%, rgba(170,126,86,.5) 20%, #cca373 50%, rgba(170,126,86,.5) 80%, transparent 100%);
+    pointer-events: none;
+  }
+  .svc-edge-top  { top: 0; }
+  .svc-edge-bottom { bottom: 0; }
+
+  .svc-detail-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 clamp(1.5rem, 5vw, 4rem);
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ── Section header ── */
+  .svc-detail-header { text-align: center; margin-bottom: 72px; }
+  .svc-eyebrow {
+    display: inline-flex; align-items: center; gap: 14px;
+    margin-bottom: 20px;
+  }
+  .svc-eyebrow-rule {
+    display: block; width: 40px; height: 2px;
+    background: linear-gradient(90deg, transparent, #cca373);
+    border-radius: 2px;
+  }
+  .svc-eyebrow-rule--r { background: linear-gradient(90deg, #cca373, transparent); }
+  .svc-eyebrow-text {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: .75rem; font-weight: 700;
+    letter-spacing: .20em; text-transform: uppercase;
+    color: #cca373;
+  }
+  .svc-detail-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    font-weight: 400; text-transform: uppercase;
+    color: #fff; letter-spacing: .04em; margin-bottom: 12px;
+  }
+  .svc-detail-title em {
+    font-style: normal;
+    background: linear-gradient(135deg, #cca373, #aa7e56);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .svc-scratch {
+    width: 60px; height: 3px; margin: 0 auto 20px;
+    background: linear-gradient(90deg, #aa7e56, #cca373);
+    border-radius: 2px;
+  }
+  .svc-detail-subtitle {
+    font-family: var(--font-body);
+    font-size: 1rem; line-height: 1.7;
+    color: rgba(255,255,255,.75);
+    max-width: 640px; margin: 0 auto;
+  }
+
+  /* ── Image band ── */
+  .svc-band {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 80px;
+  }
+  @media (max-width: 900px) { .svc-band { grid-template-columns: 1fr; gap: 40px; } }
+  .svc-band-tag {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: .72rem; font-weight: 700;
+    letter-spacing: .2em; text-transform: uppercase;
+    color: #cca373; margin-bottom: 16px;
+  }
+  .svc-band-dot { width: 6px; height: 6px; background: #cca373; border-radius: 50%; }
+  .svc-band-heading {
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+    font-weight: 400; text-transform: uppercase; letter-spacing: .04em;
+    color: #fff; margin-bottom: 16px; line-height: 1.1;
+  }
+  .svc-band-body {
+    font-family: var(--font-body);
+    font-size: .95rem; line-height: 1.75;
+    color: rgba(255,255,255,.75); margin-bottom: 28px;
+  }
+  .svc-band-stats { display: flex; align-items: center; gap: 28px; }
+  .svc-band-stat { display: flex; flex-direction: column; }
+  .svc-band-stat-num {
+    font-family: var(--font-display);
+    font-size: 2.4rem; color: #cca373; line-height: 1;
+  }
+  .svc-band-stat-unit { font-size: 1rem; margin-left: 2px; }
+  .svc-band-stat-label {
+    font-family: var(--font-body);
+    font-size: .75rem; color: rgba(255,255,255,.55);
+    text-transform: uppercase; letter-spacing: .1em; margin-top: 4px;
+  }
+  .svc-band-divider { width: 1px; height: 48px; background: rgba(255,255,255,.12); }
+  .svc-band-imgwrap {
+    position: relative; border-radius: 4px; overflow: hidden;
+    aspect-ratio: 4/3;
+  }
+  .svc-band-img { width: 100%; height: 100%; object-fit: cover; }
+  .svc-band-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(14,26,35,.6) 0%, transparent 60%);
+  }
+
+  /* ── Features grid ── */
+  .svc-features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 72px;
+  }
+  @media (max-width: 1024px) { .svc-features-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px)  { .svc-features-grid { grid-template-columns: 1fr; } }
+
+  .svc-feature-card {
+    position: relative;
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 4px;
+    padding: 28px 24px;
+    transition: background .3s, border-color .3s;
+  }
+  .svc-feature-card:hover {
+    background: rgba(170,126,86,.07);
+    border-color: rgba(170,126,86,.25);
+  }
+  .svc-feature-bar {
+    position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, #aa7e56, transparent);
+    border-radius: 4px 4px 0 0;
+  }
+  .svc-feature-icon {
+    color: #cca373; margin-bottom: 16px;
+  }
+  .svc-feature-title {
+    font-family: var(--font-heading);
+    font-size: 1rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: .06em;
+    color: #fff; margin-bottom: 10px;
+  }
+  .svc-feature-desc {
+    font-family: var(--font-body);
+    font-size: .875rem; line-height: 1.7;
+    color: rgba(255,255,255,.65);
+  }
+
+  /* ── Process ── */
+  .svc-process {
+    background: rgba(255,255,255,.03);
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: 6px;
+    padding: 48px;
+    margin-bottom: 56px;
+  }
+  @media (max-width: 640px) { .svc-process { padding: 28px 20px; } }
+  .svc-process-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    text-transform: uppercase; letter-spacing: .04em;
+    color: #fff; margin-bottom: 36px;
+  }
+  .svc-process-steps { display: flex; flex-direction: column; gap: 28px; }
+  .svc-step {
+    display: flex; align-items: flex-start; gap: 24px;
+  }
+  .svc-step-num {
+    font-family: var(--font-display);
+    font-size: 2rem; line-height: 1; color: #aa7e56;
+    min-width: 48px; flex-shrink: 0;
+  }
+  .svc-step-heading {
+    font-family: var(--font-heading);
+    font-size: .95rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: .08em;
+    color: #fff; margin-bottom: 6px;
+  }
+  .svc-step-body {
+    font-family: var(--font-body);
+    font-size: .875rem; line-height: 1.7;
+    color: rgba(255,255,255,.65);
+  }
+
+  /* ── Related links ── */
+  .svc-related {
+    display: flex; align-items: center; flex-wrap: wrap; gap: 12px;
+    margin-bottom: 48px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+  .svc-related-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: .75rem; font-weight: 700;
+    letter-spacing: .15em; text-transform: uppercase;
+    color: rgba(255,255,255,.45);
+    margin-right: 4px;
+  }
+  .svc-related-links { display: flex; flex-wrap: wrap; gap: 10px; }
+  .svc-related-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-body);
+    font-size: .8rem; font-weight: 500;
+    color: #cca373;
+    background: rgba(170,126,86,.1);
+    border: 1px solid rgba(170,126,86,.2);
+    padding: 6px 14px; border-radius: 3px;
+    text-decoration: none;
+    transition: background .25s, border-color .25s, color .25s;
+  }
+  .svc-related-link:hover {
+    background: rgba(170,126,86,.2);
+    border-color: rgba(204,163,115,.5);
+    color: #fff;
+  }
+
+  /* ── CTA strip ── */
+  .svc-cta-strip {
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 24px;
+    background: rgba(170,126,86,.08);
+    border: 1px solid rgba(170,126,86,.2);
+    border-radius: 6px;
+    padding: 28px 36px;
+  }
+  @media (max-width: 640px) { .svc-cta-strip { padding: 20px; } }
+  .svc-cta-content { display: flex; align-items: flex-start; gap: 16px; flex: 1; min-width: 260px; }
+  .svc-cta-icon { color: #cca373; flex-shrink: 0; margin-top: 2px; }
+  .svc-cta-title {
+    font-family: var(--font-heading);
+    font-size: 1.05rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: .06em;
+    color: #fff; margin-bottom: 4px;
+  }
+  .svc-cta-text {
+    font-family: var(--font-body);
+    font-size: .85rem; color: rgba(255,255,255,.65);
+  }
+  .svc-cta-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+  .svc-cta-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--font-heading);
+    font-size: .85rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: .1em;
+    padding: 12px 22px; border-radius: 3px;
+    text-decoration: none;
+    transition: opacity .25s, transform .2s;
+  }
+  .svc-cta-btn:hover { opacity: .88; transform: translateY(-1px); }
+  .svc-cta-btn--whatsapp {
+    background: #25d366; color: #fff;
+  }
+  .svc-cta-btn--primary {
+    background: linear-gradient(135deg, #aa7e56, #cca373);
+    color: #fff;
+  }
+</style>

@@ -85,7 +85,8 @@
           <li>Correccion de problemas electricos</li>
           <li>Pruebas de funcionamiento</li>
         </ul>
-        <a href="/contacto" class="svc-link">Solicitar servicio <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></a>
+        <a href="/servicios/reparacion-sopladores-industriales" class="svc-link">Ver servicio <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></a>
+        <a href="/servicios/reparacion-sopladores-roots" class="svc-related-link svc-related-link--card">Sopladores Roots <svg width="13" height="13" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></a>
       </div>
 
       <!-- Card 2: Preventivo (destacada) -->
@@ -105,7 +106,7 @@
           <li>Reemplazo de componentes de desgaste</li>
           <li>Reportes detallados de estado</li>
         </ul>
-        <a href="/contacto" class="svc-link svc-link--light">Solicitar servicio <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></a>
+        <a href="/servicios/mantenimiento-sopladores-industriales" class="svc-link svc-link--light">Ver servicio <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></a>
       </div>
 
       <!-- Card 3: Correctivo -->
@@ -125,7 +126,26 @@
           <li>Solucion inmediata de fallas</li>
           <li>Minimizacion de tiempos muertos</li>
         </ul>
-        <a href="/contacto" class="svc-link">Solicitar servicio <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></a>
+        <a href="/servicios/mantenimiento-sopladores-industriales" class="svc-link">Ver servicio <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+
+    <!-- RELATED SERVICE PAGES -->
+    <div class="svc-related animate-on-scroll">
+      <p class="svc-related-label">Páginas especializadas</p>
+      <div class="svc-related-links">
+        <a href="/servicios/reparacion-sopladores-industriales" class="svc-related-link">
+          Reparación de Sopladores Industriales
+          <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/servicios/reparacion-sopladores-roots" class="svc-related-link">
+          Sopladores Roots (Lóbulos)
+          <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+        </a>
+        <a href="/servicios/mantenimiento-sopladores-industriales" class="svc-related-link">
+          Mantenimiento Preventivo y Correctivo
+          <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+        </a>
       </div>
     </div>
 
@@ -425,6 +445,73 @@
 .svc-link:hover { gap: 14px; color: #cca373; }
 .svc-link--light { color: rgba(255,255,255,.85); }
 .svc-link--light:hover { color: #fff; gap: 14px; }
+.svc-sublink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-body);
+  font-size: .78rem;
+  font-weight: 500;
+  color: rgba(170,126,86,.7);
+  text-decoration: none;
+  margin-top: 8px;
+  transition: color .25s, gap .25s;
+}
+.svc-sublink:hover { color: #cca373; gap: 10px; }
+
+/* Related pages pills */
+.svc-related {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 40px;
+  padding: 28px 32px;
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 12px;
+}
+.svc-related-label {
+  font-family: var(--font-heading);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.4);
+  white-space: nowrap;
+  margin-right: 4px;
+}
+.svc-related-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.svc-related-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-body);
+  font-size: .8rem;
+  font-weight: 500;
+  color: #cca373;
+  background: rgba(170,126,86,.1);
+  border: 1px solid rgba(170,126,86,.2);
+  padding: 6px 14px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background .25s, border-color .25s, color .25s;
+}
+.svc-related-link:hover {
+  background: rgba(170,126,86,.2);
+  border-color: rgba(204,163,115,.5);
+  color: #fff;
+}
+/* variant when inside a dark card */
+.svc-related-link--card {
+  font-size: .75rem;
+  padding: 5px 12px;
+  margin-top: 8px;
+}
 .svc-cta {
   display: flex;
   align-items: center;
