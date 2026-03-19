@@ -1,0 +1,130 @@
+---
+// Página Términos y Condiciones - S3A Industrial
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.s3aindustrial.com/terminos",
+  "url": "https://www.s3aindustrial.com/terminos",
+  "name": "Términos y Condiciones | S3A Industrial",
+  "description": "Términos y condiciones de uso de los servicios de S3A Industrial.",
+  "publisher": {
+    "@id": "https://www.s3aindustrial.com/#organization"
+  },
+  "inLanguage": "es-AR"
+};
+---
+
+<Layout
+  title="Términos y Condiciones | S3A Industrial"
+  description="Términos y condiciones de uso de los servicios de S3A Industrial."
+  canonicalURL="https://www.s3aindustrial.com/terminos"
+  pageSchema={pageSchema}
+>
+  <Header />
+
+  <main class="bg-white text-gray-800">
+    <section class="pt-32 pb-20 md:pt-36 lg:pt-44">
+      <div class="container mx-auto px-6 sm:px-8 lg:px-10 xl:px-12 max-w-4xl">
+
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        Términos y Condiciones
+      </h1>
+      <p class="text-sm text-gray-500 mb-10">Última actualización: marzo de 2026</p>
+
+      <div class="prose prose-gray max-w-none space-y-10">
+
+        <section>
+          <h2 class="text-xl font-semibold text-gray-900 mb-3">1. Aceptación de los términos</h2>
+          <p class="text-gray-700 leading-relaxed">
+            Al acceder y utilizar el sitio web <strong>www.s3aindustrial.com</strong> (en adelante, "el Sitio"), el usuario acepta quedar vinculado por los presentes Términos y Condiciones de Uso. Si no está de acuerdo con alguna de estas condiciones, deberá abstenerse de utilizar el Sitio.
+          </p>
+          <p class="text-gray-700 leading-relaxed mt-3">
+            El simple acceso al Sitio implica la aceptación plena y sin reservas de los presentes términos en la versión publicada en el momento del acceso.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-gray-900 mb-3">2. Descripción del sitio</h2>
+          <p class="text-gray-700 leading-relaxed">
+            Este sitio web tiene carácter exclusivamente <strong>informativo</strong>. Su finalidad es presentar los servicios de reparación y mantenimiento de sopladores industriales y roots que ofrece S3A Industrial, y facilitar el contacto entre potenciales clientes y la empresa.
+          </p>
+          <p class="text-gray-700 leading-relaxed mt-3">
+            <strong>El Sitio no realiza transacciones comerciales en línea.</strong> No se venden productos ni se procesan pagos a través de esta plataforma. Toda contratación de servicios se formaliza de forma directa entre el cliente y S3A Industrial, fuera del entorno web.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-gray-900 mb-3">3. Uso permitido</h2>
+          <p class="text-gray-700 leading-relaxed">
+            El usuario se compromete a utilizar el Sitio de forma lícita, conforme a la legislación argentina vigente, a la buena fe y al orden público. En particular, queda prohibido:
+          </p>
+          <ul class="list-disc list-inside text-gray-700 mt-3 space-y-2">
+            <li>Reproducir, copiar, distribuir o modificar total o parcialmente los contenidos del Sitio sin autorización expresa y por escrito de S3A Industrial.</li>
+            <li>Utilizar el Sitio con fines fraudulentos, engañosos o que perjudiquen a terceros.</li>
+            <li>Introducir o difundir virus informáticos, código malicioso u otros elementos que puedan dañar el Sitio o los sistemas de S3A Industrial.</li>
+            <li>Realizar scraping automatizado o extracción masiva de información sin consentimiento previo.</li>
+          </ul>
+          <p class="text-gray-700 leading-relaxed mt-3">
+            S3A Industrial se reserva el derecho de bloquear el acceso al Sitio a cualquier usuario que incumpla estas condiciones.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-gray-900 mb-3">4. Propiedad intelectual</h2>
+          <p class="text-gray-700 leading-relaxed">
+            Todos los contenidos del Sitio —incluyendo, sin limitación, textos, imágenes, fotografías, logotipos, marcas, diseño gráfico, estructura y código fuente— son propiedad de <strong>S3A Industrial</strong> o de sus respectivos titulares, y se encuentran protegidos por la legislación argentina de propiedad intelectual (Ley N° 11.723 y normas complementarias).
+          </p>
+          <p class="text-gray-700 leading-relaxed mt-3">
+            Queda expresamente prohibida su reproducción, distribución, comunicación pública o transformación sin autorización previa y por escrito de S3A Industrial. La mención de marcas de terceros en el Sitio se realiza únicamente con fines informativos.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-gray-900 mb-3">5. Limitación de responsabilidad</h2>
+          <p class="text-gray-700 leading-relaxed">
+            S3A Industrial realiza esfuerzos razonables para mantener la información del Sitio actualizada y precisa, pero <strong>no garantiza la exactitud, integridad ni vigencia</strong> de los contenidos publicados. La información técnica disponible tiene carácter orientativo y no reemplaza el asesoramiento profesional personalizado.
+          </p>
+          <p class="text-gray-700 leading-relaxed mt-3">
+            S3A Industrial no será responsable por daños directos o indirectos, lucro cesante, ni perjuicio de ningún tipo derivados del uso o la imposibilidad de uso del Sitio, ni de decisiones tomadas con base exclusiva en la información aquí publicada.
+          </p>
+          <p class="text-gray-700 leading-relaxed mt-3">
+            El Sitio puede contener enlaces a sitios de terceros. S3A Industrial no asume responsabilidad alguna por el contenido, la disponibilidad ni las prácticas de privacidad de dichos sitios.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-gray-900 mb-3">6. Modificaciones</h2>
+          <p class="text-gray-700 leading-relaxed">
+            S3A Industrial se reserva el derecho de actualizar, modificar o eliminar total o parcialmente los presentes Términos y Condiciones en cualquier momento y sin previo aviso. Los cambios entrarán en vigor desde el momento de su publicación en el Sitio.
+          </p>
+          <p class="text-gray-700 leading-relaxed mt-3">
+            Se recomienda consultar periódicamente esta página para estar al tanto de las condiciones vigentes. El uso continuado del Sitio tras la publicación de modificaciones implica la aceptación de los nuevos términos.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-gray-900 mb-3">7. Contacto</h2>
+          <p class="text-gray-700 leading-relaxed">
+            Ante cualquier consulta, duda o reclamo relacionado con estos Términos y Condiciones, el usuario puede comunicarse con S3A Industrial a través del formulario de contacto disponible en el Sitio:
+          </p>
+          <p class="mt-4">
+            <a
+              href="/contacto"
+              class="inline-block bg-gray-900 text-white text-sm font-medium px-6 py-3 rounded hover:bg-gray-700 transition-colors"
+            >
+              Ir al formulario de contacto
+            </a>
+          </p>
+        </section>
+
+      </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

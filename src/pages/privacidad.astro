@@ -1,0 +1,137 @@
+---
+// Página Política de Privacidad - S3A Industrial
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.s3aindustrial.com/privacidad",
+  "url": "https://www.s3aindustrial.com/privacidad",
+  "name": "Política de Privacidad | S3A Industrial",
+  "description": "Política de privacidad y tratamiento de datos personales de S3A Industrial.",
+  "publisher": {
+    "@id": "https://www.s3aindustrial.com/#organization"
+  },
+  "inLanguage": "es-AR"
+};
+---
+
+<Layout
+  title="Política de Privacidad | S3A Industrial"
+  description="Política de privacidad y tratamiento de datos personales de S3A Industrial."
+  canonicalURL="https://www.s3aindustrial.com/privacidad"
+  pageSchema={pageSchema}
+>
+  <Header />
+
+  <main class="bg-white text-gray-800">
+    <section class="pt-32 pb-20 md:pt-36 lg:pt-44">
+      <div class="container mx-auto px-6 sm:px-8 lg:px-10 xl:px-12 max-w-4xl">
+
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        Política de Privacidad
+      </h1>
+      <p class="text-sm text-gray-500 mb-10">Última actualización: marzo de 2026</p>
+
+      <div class="prose prose-gray max-w-none space-y-10">
+
+        <section>
+          <h2 class="text-xl font-semibold text-gray-900 mb-3">1. Responsable del tratamiento</h2>
+          <p class="text-gray-700 leading-relaxed">
+            El responsable del tratamiento de los datos personales recopilados a través de este sitio web es <strong>S3A Industrial</strong>, empresa con domicilio en la provincia de Buenos Aires, República Argentina.
+          </p>
+          <p class="text-gray-700 leading-relaxed mt-3">
+            Para ejercer sus derechos o formular consultas sobre el tratamiento de sus datos, puede contactarnos a través del <a href="/contacto" class="text-blue-600 hover:underline">formulario de contacto del sitio</a>.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-gray-900 mb-3">2. Qué datos recopilamos</h2>
+          <p class="text-gray-700 leading-relaxed">
+            S3A Industrial recopila únicamente los datos que el usuario proporciona de forma voluntaria al completar el <strong>formulario de contacto</strong> del sitio. Estos datos son:
+          </p>
+          <ul class="list-disc list-inside text-gray-700 mt-3 space-y-2">
+            <li>Nombre (persona física o razón social).</li>
+            <li>Dirección de correo electrónico.</li>
+            <li>Mensaje o consulta libre.</li>
+          </ul>
+          <p class="text-gray-700 leading-relaxed mt-3">
+            No se recopilan datos sensibles en los términos del artículo 2 de la Ley N° 25.326. Adicionalmente, el sitio puede recopilar de forma automática información de navegación (páginas visitadas, tiempo de permanencia, dispositivo) a través de herramientas de analítica web, con el único fin de medir el tráfico y mejorar la experiencia del usuario.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-gray-900 mb-3">3. Para qué usamos los datos</h2>
+          <p class="text-gray-700 leading-relaxed">
+            Los datos personales recopilados se utilizan <strong>exclusivamente</strong> para:
+          </p>
+          <ul class="list-disc list-inside text-gray-700 mt-3 space-y-2">
+            <li>Responder la consulta comercial o técnica enviada por el usuario.</li>
+            <li>Brindar información sobre los servicios de reparación y mantenimiento de sopladores industriales.</li>
+            <li>Hacer seguimiento de presupuestos u órdenes de servicio cuando corresponda.</li>
+          </ul>
+          <p class="text-gray-700 leading-relaxed mt-3">
+            Los datos <strong>no serán cedidos, vendidos ni transferidos a terceros</strong> con fines comerciales o publicitarios. La única excepción aplica cuando exista una obligación legal que así lo exija (por ej., requerimiento judicial o normativa fiscal).
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-gray-900 mb-3">4. Derechos del titular</h2>
+          <p class="text-gray-700 leading-relaxed">
+            De conformidad con la <strong>Ley N° 25.326 de Protección de Datos Personales</strong>, el titular de los datos tiene derecho a:
+          </p>
+          <ul class="list-disc list-inside text-gray-700 mt-3 space-y-2">
+            <li><strong>Acceso:</strong> conocer qué datos personales propios están siendo tratados y con qué finalidad.</li>
+            <li><strong>Rectificación:</strong> solicitar la corrección de datos inexactos, incompletos o desactualizados.</li>
+            <li><strong>Supresión:</strong> solicitar la eliminación de sus datos cuando hayan dejado de ser necesarios para los fines que motivaron su recopilación.</li>
+          </ul>
+          <p class="text-gray-700 leading-relaxed mt-3">
+            Para ejercer cualquiera de estos derechos, el titular deberá comunicarse con S3A Industrial a través del <a href="/contacto" class="text-blue-600 hover:underline">formulario de contacto</a>, indicando su nombre completo y la solicitud en cuestión. Daremos respuesta en un plazo razonable conforme a la normativa vigente.
+          </p>
+          <p class="text-gray-700 leading-relaxed mt-3">
+            El organismo de control en Argentina es la <strong>Agencia de Acceso a la Información Pública (AAIP)</strong>: <a href="https://www.argentina.gob.ar/aaip" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">www.argentina.gob.ar/aaip</a>.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-gray-900 mb-3">5. Cookies</h2>
+          <p class="text-gray-700 leading-relaxed">
+            Este sitio puede utilizar <strong>cookies de analítica</strong> para medir el tráfico y el comportamiento de los usuarios de forma agregada y anónima (por ejemplo, páginas más visitadas o fuentes de acceso). Esta información no permite identificar al usuario de forma individual.
+          </p>
+          <p class="text-gray-700 leading-relaxed mt-3">
+            El usuario puede desactivar el uso de cookies desde la configuración de su navegador en cualquier momento. Tenga en cuenta que deshabilitar ciertas cookies podría afectar parcialmente la experiencia de navegación.
+          </p>
+          <p class="text-gray-700 leading-relaxed mt-3">
+            No se utilizan cookies de publicidad ni se comparte información de navegación con redes publicitarias de terceros.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-gray-900 mb-3">6. Vigencia</h2>
+          <p class="text-gray-700 leading-relaxed">Esta Política de Privacidad se encuentra vigente desde marzo de 2026. S3A Industrial se reserva el derecho de modificarla en cualquier momento para adaptarla a cambios legislativos o en las prácticas del sitio. Las actualizaciones serán publicadas en esta misma página con la fecha de revisión correspondiente.</p>
+          <p class="text-gray-700 leading-relaxed mt-3">El uso continuado del sitio tras la publicación de cambios implica la aceptación de la política actualizada.</p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-semibold text-gray-900 mb-3">Contacto</h2>
+          <p class="text-gray-700 leading-relaxed">Para consultas relacionadas con esta Política de Privacidad o para ejercer sus derechos, utilice el <a href="/contacto" class="text-blue-600 hover:underline">formulario de contacto</a> del sitio.</p>
+          <p class="mt-4">
+            <a
+              href="/contacto"
+              class="inline-block bg-gray-900 text-white text-sm font-medium px-6 py-3 rounded hover:bg-gray-700 transition-colors"
+            >
+              Ir al formulario de contacto
+            </a>
+          </p>
+        </section>
+
+
+      </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
